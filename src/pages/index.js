@@ -14,45 +14,58 @@ const Home = () => (
     <Layout showNavigation showSocialCol showFooter>
         <SEO />
         <Intro />
-        <MaxWidth className="Home__recent">
+        <MaxWidth className="Home__features">
             <div>
                 <h2>
-                    Recent Project
+                    Data
                 </h2>
-                <Link to="/2020-bachelor" className="Home__recent__item Home__recent__item--project">
-                    <ContestantHead name="Deandra" />
+                <Link to="/2020-bachelor" className="Home__features__item">
                     <div>
                         <h3>
-                            Bachelor 2020 Contestant Guide
+                            Spatial data, immutably stored
                         </h3>
                         <p>
-                            Hannah Ann, Madison, Kelley, oh my!
+                        We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.
                         </p>
                     </div>
                 </Link>
             </div>
             <div>
                 <h2>
-                    Recent Post
+                    Oracle
                 </h2>
                 <Link to="/blog/set-up-local-website"
-                    className="Home__recent__item Home__recent__item--post">
+                    className="Home__features__item">
                     <div>
                         <h3>
-                            Set up a local dev environment and run a website
+                            Bridge the real-world with web3.
                         </h3>
                         <p>
-                            Collect and utilize the tools needed to spin up and edit a website on your computer.
-                            Basic HTML/CSS/JS, D3.js, and Twitter Bootstrap starters provided.
+                        Building the oracle systems to trustlessly fetch spatial data and analytics into spatial contracts and location-based dApps.
                         </p>
                     </div>
-
+                </Link>
+            </div>
+            <div>
+                <h2>
+                    Smart Contracts
+                </h2>
+                <Link to="/blog/set-up-local-website"
+                    className="Home__features__item">
+                    <div>
+                        <h3>
+                            Location-based dApps
+                        </h3>
+                        <p>
+                        We're developing libraries and tools to make using spatial data in smart contracts simple and intuitive.
+                        </p>
+                    </div>
                 </Link>
             </div>
         </MaxWidth>
         <MaxWidth id="work" className="Home__projects">
             <h1>
-                Selected Work
+                Astral Work
             </h1>
             {Object.keys(projects).map((key) =>
                 <Project

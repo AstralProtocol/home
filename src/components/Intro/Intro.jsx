@@ -13,7 +13,7 @@ const Intro = () => {
         alt="Project"
       />
       <h3 className="Intro__subheader">
-        Building a spatial data protocol for the decentralized web
+        At Astral we are building tools to enable the location-based decentralized web.
       </h3>
       <Link
         doOpenInNewTab
@@ -22,7 +22,7 @@ const Intro = () => {
         buttonProps={{ size: "xl", color: "yellow-stroke" }}
         to="mailto:hello@marguerite.io"
       >
-        Launch Astral Studio
+        Read the docs
       </Link>
     </MaxWidth>
   )

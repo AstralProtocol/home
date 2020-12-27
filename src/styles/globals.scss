@@ -195,12 +195,11 @@ button {
 }
 
 .Home {
-  &__recent {
+  &__features {
     padding-top: 10vh;
     padding-bottom: 8em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 6em;
+    grid-template-columns: 1fr 1fr 1fr;
 
     &__item {
       text-decoration: none;
@@ -209,19 +208,12 @@ button {
       width: fit-content;
       padding-right: 1.5em;
       border-radius: 8px;
-
-      &:hover {
-        background: $pink-300;
-      }
-
-      &--post {
-        padding-left: 1.5em;
-        margin-left: -1.5em;
+      padding-left: 1.5em;
+      margin-left: -1.5em;
 
         &:hover {
-          background: $blue-300;
+          background: $astral-yellow;
         }
-      }
     }
 
     h3 {

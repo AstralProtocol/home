@@ -1,19 +1,20 @@
 import React from "react";
 
 const projects = {
-    currents: {
-        title: "Currents Dashboard",
-        projectType: "dashboard",
+    hyperaware: {
+        title: "Hyperaware",
+        projectType: "sdApp",
         description: <div>
-            A look into the Current's Attention analytics dashboard built at Parse.ly.
+            A spatial governance protocol for connected devices: congestion zones running on smart contacts.
         </div>,
-        readMore: "./currents",
+        demo: 'https://hyperaware.io/',
+        github: "https://github.com/wearehyperaware",
         "tech": [
             "react",
-            "redux",
+            "iotex",
             "d3",
-            "mixpanel",
-            "figma"
+            "web3",
+            "mapbox"
         ],
         hasImageBorder: true,
         imgType: "mp4",
@@ -21,86 +22,59 @@ const projects = {
             "project-currents-01"
         ],
     },
-    prist: {
-        title: "Prist | A Gatsby & Prismic Starter",
-        projectType: "web",
+    sprout: {
+        title: "Sprout",
+        projectType: "sdApp",
         description: <div>
-            A light-themed starter powered
-            by <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Gatsby v2</a> and <a href="https://www.gatsbyjs.org/" rel="noopener noreferrer" target="_blank">Prismic</a> to showcase portfolios and blogs.
-            <br />
-            <br />
-            <a href="https://www.gatsbyjs.org/starters/margueriteroth/gatsby-prismic-starter-prist/" rel="noopener noreferrer" target="_blank">Gatsby starter doc</a>
+            A sustainability-linked bond in Solidity: link loan terms to environmental metrics
         </div>,
-        demo: "https://prist.marguerite.io/",
-        github: "https://github.com/margueriteroth/gatsby-prismic-starter-prist",
+        github: "https://github.com/astralDAO/sprout",
         "tech": [
-            "gatsby",
-            "graphql",
-            "cms",
-            "react",
-            "figma",
-            "netlify",
+            "solidity",
+            "hardhat",
+            "thegraph",
+            "ethers",
+            "ethereum",
+            "web3",
         ],
         hasImageBorder: true,
         "img_src": [
             "project-prist-01"
         ],
     },
-    dvs: {
-        title: "Data Visualization Society Member Map",
-        projectType: "web",
+    toposol: {
+        title: "Topo.sol",
+        projectType: "library",
         description: <div>
-            The <a href="https://www.datavisualizationsociety.com/" rel="noopener noreferrer" target="_blank">Data Visualization Society</a> asked
-            members to rank their skills in the following categories: data, visualization, and society.
-            <br />
-            <br />
-            I mapped the location of each
-            member with the ability to filter by their highest ranked skill
-            to show the distribution of each around the world.
+           A library of geometric and topological functions in Solidity.
         </div>,
-        demo: "/dvs",
-        github: "https://github.com/margueriteroth/flagg/tree/master/src/components/Map",
+        github: "https://github.com/johnx25bd/topo-sol",
         "tech": [
-            "react",
-            "d3",
-            "data",
+            "solidity",
+            "ethereum",
+            "truffle",
         ],
         "img_src": [
             "project-dvs-01"
         ],
     },
-    retention: {
-        title: "Parse.ly Analytics Data Retention Upsells",
-        projectType: "web",
+    geolocker: {
+        title: "Geolocker",
+        projectType: "sdApp",
         description: <div>
-            Working through adding more obvious data retention limit communication in the analytics dashboard and allowing users to upgrade.
+            A zone registry built on Ethereum and 3Box.
         </div>,
-        readMore: "/data-retention",
+        github: "https://github.com/johnx25bd/ethlondon",
         "tech": [
-            "angular",
-            "less",
-            "figma",
+            "react",
+            "3box",
+            "solidity",
+            "mapbox",
+            "turf"
         ],
         hasImageBorder: true,
         "img_src": [
             "project-data-retention-01"
-        ],
-    },
-    albondiga: {
-        title: "Albondiga | App for requesting some dinner 🍝",
-        projectType: "web",
-        description: "I developed this project as a birthday gift for my partner — a lover of spaghetti and meatballs. The recipient can pick the ingredients making up a spaghetti and meatballs dinner: pasta type, sauce, drinks, etc.",
-        demo: "https://margueriteroth.github.io/albondiga/",
-        github: "https://github.com/margueriteroth/albondiga",
-        "tech": [
-            "react",
-            "firebase",
-            "scss",
-            "bem",
-            "node"
-        ],
-        "img_src": [
-            "project-albondiga-01"
         ],
     },
 };
