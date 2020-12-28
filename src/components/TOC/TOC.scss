@@ -1,77 +1,73 @@
 //@import "../../styles/colors.scss";
 @import "./../../styles/lib";
 
-
 .TOC {
-    padding-top: 4.75rem;
+  padding-top: 4.75rem;
 
-    &__container {
-        width: 100%;
-        margin: 0 auto;
-        max-width: $post-max-width;
-        height: 0;
-        position: sticky;
-        top: 0em;
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $post-max-width;
+    height: 0;
+    position: sticky;
+    top: 0em;
 
-        @media(max-width: 1000px) {
-            display: none;
-        }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 0.5em;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+  }
+
+  &__icon {
+    width: 1em;
+    margin-right: 0.2em;
+  }
+
+  &__link {
+    display: block;
+    letter-spacing: -0.005em;
+    color: $grey-700;
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 0.85rem;
+
+    &--active {
+      color: $astral-yellow;
+      //font-weight: 600;
     }
 
-    &__title {
-        margin: 0;
-        padding-bottom: 0.5em;
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        grid-template-columns: auto auto 1fr;
+    &:hover {
+      cursor: pointer;
+      color: $astral-yellow;
+      //font-weight: 600;
     }
 
-    &__icon {
-        width: 1em;
-        margin-right: 0.2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+
+    &--h {
+      &2 {
+        margin-top: 1.25em;
+      }
     }
 
-    &__link {
-        display: block;
-        letter-spacing: -0.005em;
-        color: $grey-700;
-        font-weight: 500;
-        line-height: 1.3;
-        font-size: 0.85rem;
-
-        &--active {
-            color: $grey-900;
-            //font-weight: 600;
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: $grey-900;
-            //font-weight: 600;
-        }
-
-        margin-bottom: 2em;
-        margin-left: 1em;
-
-        &--h {
-            &2 {
-                margin-top: 1.25em;
-            }
-        }
-
-        &:first-of-type {
-            display: none;
-        }
-
-
-        // &:first-of-type {
-        //     color: $grey-900;
-        // }
+    &:first-of-type {
+      display: none;
     }
+
+    // &:first-of-type {
+    //     color: $grey-900;
+    // }
+  }
 }
-
-
 
 // .PostTOC {
 //     position: absolute;

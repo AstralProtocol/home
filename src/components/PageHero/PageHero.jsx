@@ -1,19 +1,32 @@
 import React from "react"
 import Img from "gatsby-image"
-import PropTypes from 'prop-types';
-import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
-import './PageHero.scss';
+import PropTypes from "prop-types"
+import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
+import "./PageHero.scss"
+/*
 import videoCurrents from 'content/work/2019-11-25-currents/currents-info.mp4';
 import imgStory from 'content/work/2019-11-25-currents/currents-story.png';
 import imgMap from 'content/work/2019-11-25-currents/currents-map.png';
 import imgRefCats from 'content/work/2019-11-25-currents/currents-ref-categories.png';
 import imgTimeline from 'content/work/2019-11-25-currents/currents-timeline.png';
+*/
 
+const PageHero = ({ className, page, image }) => {
+  return (
+    <MaxWidth size="l" className="PageHero__img__container">
+      <Img fluid={image} />
+    </MaxWidth>
+  )
+}
 
-const PageHero = ({className, page, image}) => {
-    return (
-        <>
-            {page === 'currents' ? (
+PageHero.propTypes = {
+  page: PropTypes.string,
+  image: PropTypes.object,
+}
+
+export default PageHero
+
+/*page === 'currents' ? (
                 <div className="PageHeroCurrents__container">
                     <MaxWidth size="l" className="PageHeroCurrents">
                         <div className="PageHeroCurrents__img__container">
@@ -35,18 +48,4 @@ const PageHero = ({className, page, image}) => {
                         </div>
                     </MaxWidth>
                 </div>
-            ) : (
-                <MaxWidth size="l" className="PageHero__container">
-                    <Img fluid={image} />
-                </MaxWidth>
-            )}
-        </>
-    );
-};
-
-PageHero.propTypes = {
-    page: PropTypes.string,
-    image: PropTypes.object,
-};
-
-export default PageHero;
+                */

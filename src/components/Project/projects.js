@@ -16,10 +16,9 @@ const projects = {
             "web3",
             "mapbox"
         ],
-        hasImageBorder: true,
-        imgType: "mp4",
+        hasImageBorder: false,
         "img_src": [
-            "project-currents-01"
+            "project-hyperaware"
         ],
     },
     sprout: {
@@ -37,9 +36,9 @@ const projects = {
             "ethereum",
             "web3",
         ],
-        hasImageBorder: true,
+        hasImageBorder: false,
         "img_src": [
-            "project-prist-01"
+            "project-sprout"
         ],
     },
     toposol: {
@@ -48,14 +47,16 @@ const projects = {
         description: <div>
            A library of geometric and topological functions in Solidity.
         </div>,
+        readMore: "./topo",
         github: "https://github.com/johnx25bd/topo-sol",
         "tech": [
-            "solidity",
-            "ethereum",
-            "truffle",
+            "Solidity",
+            "Ethereum",
+            "Truffle",
         ],
+        hasImageBorder: false,
         "img_src": [
-            "project-dvs-01"
+            "project-topo"
         ],
     },
     geolocker: {
@@ -72,9 +73,9 @@ const projects = {
             "mapbox",
             "turf"
         ],
-        hasImageBorder: true,
+        hasImageBorder: false,
         "img_src": [
-            "project-data-retention-01"
+            "project-geolocker"
         ],
     },
 };
