@@ -13,13 +13,14 @@ const Intro = () => {
         alt="Project"
       />
       <h3 className="Intro__subheader">
-        At Astral we are building tools to enable the location-based decentralized web.
+        At Astral we are building tools to enable the location-based
+        decentralized web.
       </h3>
       <Link
         doOpenInNewTab
         isButton
         className="Intro__button"
-        buttonProps={{ size: "xl", color: "yellow-stroke" }}
+        buttonProps={{ size: "xl", color: "astral-yellow" }}
         to="mailto:hello@marguerite.io"
       >
         Read the docs

@@ -190,8 +190,8 @@
               content: "";
               width: 100%;
               height: 100%;
-              background: rgba($blue, 0.45);
-              z-index: 100;
+              background: rgba($astral-yellow, 0.1);
+              z-index: -1;
               top: 0;
               left: 0;
               transition: all 100ms ease-out;
@@ -233,7 +233,7 @@
       align-items: center;
       text-align: center;
       padding: 4em;
-      z-index: 200;
+      z-index: 0;
       opacity: 0;
       transform: translateY(4px);
       transition: all 100ms ease-out;

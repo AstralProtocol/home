@@ -200,6 +200,7 @@ button {
     padding-bottom: 8em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
 
     &__item {
       text-decoration: none;
