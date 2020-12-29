@@ -25,7 +25,7 @@ const Header = ({ knockoutHeader }) => (
         </Link>
         <div className="Header__links">
           <Link className="Header__link" to={"/docs"}>
-            Dpcs
+            Docs
           </Link>
           <Link className="Header__link" to={"/#work"}>
             Work

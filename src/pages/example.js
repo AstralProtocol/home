@@ -13,8 +13,8 @@ const Bachelor2020 = () => {
                 showNavigation={false}
                 showFooter={false}>
                 <SEO
-                    title="Bachelor Contestants 2020"
-                    description="Reference guide to women on Peter's season!"
+                    title="Example"
+                    description="Example"
                     image="https://marguerite.io/og-image-bachelor2020.png"
                     twitterImage="https://marguerite.io/twitter-image-bachelor2020.png"
                 />
