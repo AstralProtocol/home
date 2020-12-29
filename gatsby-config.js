@@ -5,7 +5,7 @@ module.exports = {
         author: `Astral | @astraldao`,
         siteUrl: "https://astral.global",
         image: `https://astral.global/og-image.png`,
-        twitterImage: `https:/astral.global/twitter-image.png`,
+        twitterImage: `https://astral.global/twitter-image.png`,
         keywords: `blockchain, spatial data, data, ethereum, astral, cryptocurrency, bitcoin`,
   },
   plugins: [
