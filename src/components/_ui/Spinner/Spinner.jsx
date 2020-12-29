@@ -1,55 +1,59 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import './Spinner.scss';
+import React, { Component } from "react"
+import classNames from "classnames"
+import PropTypes from "prop-types"
+import "./Spinner.scss"
 
 class Spinner extends Component {
-    static propTypes = {
-        emptyCurrentPet: PropTypes.func,
-        currentMenuStep: PropTypes.number,
-        pet: PropTypes.string,
-        mouseEventsEnabled: PropTypes.bool,
-        size: PropTypes.string,
-        spin: PropTypes.bool
-    };
+  static propTypes = {
+    emptyCurrentImg: PropTypes.func,
+    currentMenuStep: PropTypes.number,
+    img: PropTypes.string,
+    mouseEventsEnabled: PropTypes.bool,
+    size: PropTypes.string,
+    spin: PropTypes.bool,
+  }
 
-    static defaultProps = {
-        pet: "oscar",
-        mouseEventsEnabled: false,
-        spin: false
-    };
+  static defaultProps = {
+    img: "eth",
+    mouseEventsEnabled: false,
+    spin: false,
+  }
 
-    onMouseOver = () => {
-        this.props.setCurrentPet(this.props.pet);
-    }
+  onMouseOver = () => {
+    this.props.setCurrentImg(this.props.img)
+  }
 
-    onMouseLeave = () => {
-        this.props.emptyCurrentPet();
-    }
+  onMouseLeave = () => {
+    this.props.emptyCurrentImg()
+  }
 
-    getClassName() {
-        const { size, spin, className } = this.props;
-        return classNames(className,
-            'Spinner__container',
-            `Spinner__container--size-${size}`,
-            {'Spinner__container--spin': spin}
-        );
-    }
+  getClassName() {
+    const { size, spin, className } = this.props
+    return classNames(
+      className,
+      "Spinner__container",
+      `Spinner__container--size-${size}`,
+      { "Spinner__container--spin": spin }
+    )
+  }
 
-    render() {
-        const { pet, mouseEventsEnabled } = this.props;
+  render() {
+    const { img, mouseEventsEnabled } = this.props
 
-        return (
-            <div className={this.getClassName()}
-                 onMouseOver={mouseEventsEnabled ? this.onMouseOver : null}
-                 onMouseLeave={mouseEventsEnabled ? this.onMouseLeave : null}>
-                <img
-                    src={require(`./img-${pet}.png`)}
-                    alt="Spinning pet"
-                    className="Spinner"/>
-            </div>
-        );
-    }
+    return (
+      <div
+        className={this.getClassName()}
+        onMouseOver={mouseEventsEnabled ? this.onMouseOver : null}
+        onMouseLeave={mouseEventsEnabled ? this.onMouseLeave : null}
+      >
+        <img
+          src={require(`./img-${img}.png`)}
+          alt="Spinning img"
+          className="Spinner"
+        />
+      </div>
+    )
+  }
 }
 
-export default Spinner;
+export default Spinner

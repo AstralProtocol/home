@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-        title: `Marguerite Roth | Product Designer & Developer`,
-        description: `Personal site for Marguerite Roth`,
-        author: `Marguerite Roth | marguerite.io | @marrrguerite`,
-        siteUrl: "https://marguerite.io",
-        image: `https://marguerite.io/og-image.png`,
-        twitterImage: `https://marguerite.io/twitter-image.png`,
-        keywords: `web development, design, data, product, visualization, dashboard, analytics, currents, parse.ly, visual`,
+        title: `Astral`,
+        description: `Astral Landing page`,
+        author: `Astral | @astraldao`,
+        siteUrl: "https://astral.global",
+        image: `https://astral.global/og-image.png`,
+        twitterImage: `https:/astral.global/twitter-image.png`,
+        keywords: `blockchain, spatial data, data, ethereum, astral, cryptocurrency, bitcoin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,7 +21,7 @@ module.exports = {
     {
         resolve: `gatsby-plugin-canonical-urls`,
         options: {
-        siteUrl: `https://marguerite.io`,
+        siteUrl: `https://astral.global`,
     },
       },
     // {
@@ -114,13 +114,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `bachelor`,
-        path: `${__dirname}/src/components/Bachelor/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/src/content/work`,
         name: `work`,
       },
@@ -137,13 +130,13 @@ module.exports = {
     {
         resolve: `gatsby-plugin-manifest`,
         options: {
-            name: `rose madder`,
-            short_name: `rose`,
+            name: `astral`,
+            short_name: `astral`,
             start_url: `/`,
             background_color: `#663399`,
             theme_color: `#663399`,
             display: `minimal-ui`,
-            icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
+            icon: `src/images/Transparent-Symbol.png`, // This path is relative to the root of the site.
         },
     },
     {
@@ -173,7 +166,7 @@ module.exports = {
     {
         resolve: `gatsby-plugin-parsely-analytics`,
         options: {
-          apikey: `marguerite.io`,
+          apikey: `astral.global`,
           enableInDevelopment: false // send page views when NODE_ENV !== prod
         }
     }

@@ -56,6 +56,7 @@ const Project = ({
                   <Link
                     to={demo}
                     isButton
+                    doOpenInNewTab
                     buttonProps={{ color: "astral-yellow", size: "l" }}
                   >
                     Demo
@@ -66,7 +67,11 @@ const Project = ({
 
               {readMore && (
                 <p>
-                  <Link to={readMore} isButton buttonProps={{ size: "l" }}>
+                  <Link
+                    to={readMore}
+                    isButton
+                    buttonProps={{ color: "astral-yellow", size: "l" }}
+                  >
                     Read More
                   </Link>
                 </p>
@@ -103,6 +108,7 @@ const Project = ({
             {images.map((image, i) => (
               <Link
                 key={i}
+                doOpenInNewTab
                 className="Project__image__link"
                 to={demo || readMore}
               >

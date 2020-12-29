@@ -27,11 +27,12 @@ const projects = {
         description: <div>
             A sustainability-linked bond in Solidity: link loan terms to environmental metrics
         </div>,
+        readMore: "./sprout",
         github: "https://github.com/astralDAO/sprout",
         "tech": [
             "solidity",
             "hardhat",
-            "thegraph",
+            "the graph",
             "ethers",
             "ethereum",
             "web3",
@@ -61,10 +62,11 @@ const projects = {
     },
     geolocker: {
         title: "Geolocker",
-        projectType: "sdApp",
+        projectType: "Early work",
         description: <div>
             A zone registry built on Ethereum and 3Box.
         </div>,
+        readMore: "./geolocker",
         github: "https://github.com/johnx25bd/ethlondon",
         "tech": [
             "react",

@@ -21,7 +21,7 @@ const Intro = () => {
         isButton
         className="Intro__button"
         buttonProps={{ size: "xl", color: "astral-yellow" }}
-        to="mailto:hello@marguerite.io"
+        to="/example"
       >
         Read the docs
       </Link>

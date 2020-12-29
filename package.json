@@ -1,9 +1,9 @@
 {
-  "name": "marguerite-roth-site-and-writing",
+  "name": "astral-landing",
   "private": true,
-  "description": "Marguerite Roth's personal site and blog.",
-  "version": "0.1.0",
-  "author": "Marguerite Roth | marguerite.io | @marrrguerite",
+  "description": "Astral Landing",
+  "version": "1.0",
+  "author": "Astral | @astraldao",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.4",
