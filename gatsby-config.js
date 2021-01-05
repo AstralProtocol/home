@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
         title: `Astral`,
         description: `Astral Landing page`,
-        author: `Astral | @astraldao`,
+        author: `Astral <contact@astral.global>`,
         siteUrl: "https://astral.global",
         image: `https://astral.global/og-image.png`,
         twitterImage: `https://astral.global/twitter-image.png`,
