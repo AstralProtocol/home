@@ -24,7 +24,11 @@ const Header = ({ knockoutHeader }) => (
           />
         </Link>
         <div className="Header__links">
-          <Link className="Header__link" to={"/docs"}>
+          <Link
+            doOpenInNewTab
+            className="Header__link"
+            to={"https://docs.astral.global"}
+          >
             Docs
           </Link>
           <Link className="Header__link" to={"/#work"}>

@@ -21,7 +21,7 @@ const Intro = () => {
         isButton
         className="Intro__button"
         buttonProps={{ size: "xl", color: "astral-yellow" }}
-        to="/example"
+        to="https://docs.astral.global"
       >
         Read the docs
       </Link>
