@@ -46,7 +46,7 @@ const SocialCol = () => {
         <Link
           className="SocialCol__icon"
           doOpenInNewTab
-          to="https://twitter.com/astraldao"
+          to="https://twitter.com/astralprotocol"
         >
           <FontAwesomeIcon icon={faTwitter} />
         </Link>
