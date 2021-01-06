@@ -12,7 +12,7 @@ const SocialCol = () => {
         <Link
           className="SocialCol__icon"
           doOpenInNewTab
-          to="https://github.com/astralDAO"
+          to="https://github.com/AstralProtocol"
         >
           <FontAwesomeIcon icon={faGithub} />
         </Link>

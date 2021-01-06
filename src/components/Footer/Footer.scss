@@ -24,6 +24,11 @@
     flex-direction: column;
   }
 
+  &__spinner {
+    width: 100px;
+    text-align: left;
+  }
+
   &__container {
     width: 100%;
     margin-top: auto;

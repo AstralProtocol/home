@@ -6,7 +6,7 @@ class SpinningImgs extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      imgs: ["eth"],
+      imgs: ["ethereum"],
       currentImg: null,
     }
 

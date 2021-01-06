@@ -68,6 +68,39 @@ const Home = () => (
         />
       ))}
     </MaxWidth>
+    <MaxWidth className="Home__backedby">
+      <h1>Backed by</h1>
+      <div className="Home__backedby__container">
+        <div>
+          <Link
+            className="Home__backedby__container__link"
+            doOpenInNewTab
+            to="https://gitcoin.co/"
+          >
+            <img
+              className="Home__backedby__container__item"
+              src={require(`../images/gitcoin.png`)}
+              alt="Gitcoin"
+            />
+          </Link>
+          <h3>Gitcoin</h3>
+        </div>
+        <div>
+          <Link
+            className="Home__backedby__container__link"
+            doOpenInNewTab
+            to="https://filecoin.io/"
+          >
+            <img
+              className="Home__backedby__container__item"
+              src={require(`../images/filecoin.png`)}
+              alt="Filecoin"
+            />
+          </Link>
+          <h3>Filecoin</h3>
+        </div>
+      </div>
+    </MaxWidth>
   </Layout>
 )
 

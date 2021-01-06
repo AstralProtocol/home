@@ -34,9 +34,11 @@ const Header = ({ knockoutHeader }) => (
           <Link className="Header__link" to={"/#work"}>
             Work
           </Link>
+          {/* hidden for now
           <Link className="Header__link" to={"/blog"}>
             Blog
           </Link>
+          */}
           <Link
             doOpenInNewTab
             className="Header__link Header__link--email"

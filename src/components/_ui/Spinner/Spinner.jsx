@@ -14,7 +14,7 @@ class Spinner extends Component {
   }
 
   static defaultProps = {
-    img: "eth",
+    img: "ethereum",
     mouseEventsEnabled: false,
     spin: false,
   }
