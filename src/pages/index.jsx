@@ -69,7 +69,7 @@ const Home = () => (
       ))}
     </MaxWidth>
     <MaxWidth className="Home__backedby">
-      <h1>Backed by</h1>
+      <h1>Supported by</h1>
       <div className="Home__backedby__container">
         <div>
           <Link
