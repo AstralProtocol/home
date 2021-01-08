@@ -87,12 +87,12 @@
     // }
 
     @media (max-width: 1100px) {
-      max-width: 50%;
+      width: 60vw;
     }
 
     @media (max-width: $media-tablet) {
       position: relative;
-      max-width: 100%;
+      width: 60vw;
     }
   }
 }

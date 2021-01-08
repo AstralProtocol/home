@@ -7,6 +7,9 @@
   &__container {
     display: flex;
     align-items: center;
+    @media (max-width: 850px) {
+      text-align: center;
+    }
   }
 
   &__img {
@@ -19,6 +22,9 @@
       transition: 150ms ease-out all;
       z-index: 1;
     }
+    @media (max-width: 850px) {
+      text-align: center;
+    }
   }
 
   &__message {
@@ -26,5 +32,8 @@
     margin: 0 auto;
     text-align: left;
     transform: translateX(17px);
+    @media (max-width: 850px) {
+      text-align: center;
+    }
   }
 }
