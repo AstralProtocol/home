@@ -14,7 +14,10 @@ const Home = () => (
     <MaxWidth className="Home__features">
       <div>
         <h2>Data</h2>
-        <Link to="/example" className="Home__features__item">
+        <Link
+          to="https://docs.astral.global/geodids/geodid-intro"
+          className="Home__features__item"
+        >
           <div>
             <h3>Spatial data, immutably stored</h3>
             <p>
@@ -26,7 +29,10 @@ const Home = () => (
       </div>
       <div>
         <h2>Oracle</h2>
-        <Link to="/blog/set-up-local-website" className="Home__features__item">
+        <Link
+          to="https://docs.astral.global/astral-oracles/introduction-astral-oracles"
+          className="Home__features__item"
+        >
           <div>
             <h3>Bridge the real-world with web3.</h3>
             <p>
@@ -38,7 +44,10 @@ const Home = () => (
       </div>
       <div>
         <h2>Smart Contracts</h2>
-        <Link to="/blog/set-up-local-website" className="Home__features__item">
+        <Link
+          to="https://docs.astral.global/astral-contracts/introduction-spatial-contracts"
+          className="Home__features__item"
+        >
           <div>
             <h3>Location-based dApps</h3>
             <p>

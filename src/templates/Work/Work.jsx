@@ -81,7 +81,6 @@ export const query = graphql`
         title
         section
         details {
-          role
           status
           tools
           waitingForUserData

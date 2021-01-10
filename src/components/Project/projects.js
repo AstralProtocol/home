@@ -42,14 +42,14 @@ const projects = {
             "project-sprout"
         ],
     },
-    toposol: {
-        title: "Topo.sol",
+    spatialsol: {
+        title: "Spatial.sol",
         projectType: "library",
         description: <div>
            A library of geometric and topological functions in Solidity.
         </div>,
-        readMore: "./topo",
-        github: "https://github.com/johnx25bd/topo-sol",
+        demo: "https://github.com/AstralProtocol/spatial-sol",
+        github: "https://github.com/AstralProtocol/spatial-sol",
         "tech": [
             "Solidity",
             "Ethereum",
@@ -57,7 +57,7 @@ const projects = {
         ],
         hasImageBorder: false,
         "img_src": [
-            "project-topo"
+            "project-spatial"
         ],
     },
     geolocker: {

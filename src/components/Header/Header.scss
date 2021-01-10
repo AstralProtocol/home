@@ -25,8 +25,6 @@
       box-shadow: 0 4px 20px 0 rgba($astral-grey, 0.5);
 
       .Header__container {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
       }
 
       .Header__logo {
@@ -139,6 +137,25 @@
       &:hover {
         color: $blue-600;
 
+        span {
+          opacity: 1;
+          transform: translateX(6px);
+          transition: all 400ms ease-in-out;
+        }
+      }
+    }
+
+    &--donate {
+      font-weight: 1000;
+      color: $astral-yellow;
+      span {
+        display: inline-block;
+        transition: transform 300ms ease-in-out;
+        opacity: 0;
+      }
+
+      &:hover {
+        color: $astral-yellow;
         span {
           opacity: 1;
           transform: translateX(6px);

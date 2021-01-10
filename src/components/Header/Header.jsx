@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 import Headroom from "react-headroom"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import Link from "components/_ui/Link/Link"
-import Logo from "components/_ui/Logo/Logo"
 import "./Header.scss"
 
 const Header = ({ knockoutHeader }) => (
@@ -45,6 +44,14 @@ const Header = ({ knockoutHeader }) => (
             to="mailto:contact@astral.global"
           >
             Contact
+            <span>&#8594;</span>
+          </Link>
+          <Link
+            doOpenInNewTab
+            className="Header__link Header__link--donate"
+            to="https://gitcoin.co/grants/1102/astral"
+          >
+            Donate
             <span>&#8594;</span>
           </Link>
         </div>

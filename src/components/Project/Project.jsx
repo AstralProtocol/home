@@ -83,7 +83,11 @@ const Project = ({
                     className="Project__link__icon"
                     icon={faGithub}
                   />
-                  <Link to={github} className="Project__inspiration__link">
+                  <Link
+                    doOpenInNewTab
+                    to={github}
+                    className="Project__inspiration__link"
+                  >
                     Github
                   </Link>
                 </p>
