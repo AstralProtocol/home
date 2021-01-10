@@ -30,7 +30,7 @@ const Home = () => (
       <div>
         <h2>Oracle</h2>
         <Link
-          to="https://docs.astral.global/astral-oracles/introduction-astral-oracles"
+          to="https://docs.astral.global/astral-protocol/oracles"
           className="Home__features__item"
         >
           <div>
@@ -45,7 +45,7 @@ const Home = () => (
       <div>
         <h2>Smart Contracts</h2>
         <Link
-          to="https://docs.astral.global/astral-contracts/introduction-spatial-contracts"
+          to="https://docs.astral.global/astral-protocol/spatial-contracts"
           className="Home__features__item"
         >
           <div>
