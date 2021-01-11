@@ -1,6 +1,10 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import {
+  faGithub,
+  faTwitter,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons"
 import Link from "components/_ui/Link/Link"
 
 import "./SocialCol.scss"
@@ -16,17 +20,18 @@ const SocialCol = () => {
         >
           <FontAwesomeIcon icon={faGithub} />
         </Link>
-        {/*
-                    <Link className="SocialCol__icon" doOpenInNewTab to="">
+
+        <Link className="SocialCol__icon" doOpenInNewTab to="">
           <FontAwesomeIcon icon={faDribbble} />
         </Link>
-                <Link
+        <Link
           className="SocialCol__icon"
           doOpenInNewTab
-          to="https://www.linkedin.com/in/margueriteroth/"
+          to="https://www.linkedin.com/company/astralprotocol/"
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </Link>
+        {/*
                 <Link
           className="SocialCol__icon"
           doOpenInNewTab
