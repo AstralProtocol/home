@@ -118,6 +118,7 @@ module.exports = {
         name: `work`,
       },
     },
+    /*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -125,6 +126,7 @@ module.exports = {
         name: `blog`,
       },
     },
+    */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

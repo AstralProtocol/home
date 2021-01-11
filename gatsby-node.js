@@ -82,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
 
-
+ /*
     const blogPost = path.resolve(`src/templates/Post/Post.jsx`);
     const blogPosts = await graphql(`
         query {
@@ -119,6 +119,8 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+
+    */
 }
 
 

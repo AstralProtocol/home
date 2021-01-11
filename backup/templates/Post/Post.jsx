@@ -45,11 +45,6 @@ export default ({ data }) => {
         <div>
           <MaxWidth className="Post__hero" size="xl">
             <div className="Post__hero__content">
-              <Label className="Post__hero__label" category="primary">
-                <Link className="Post__hero__label__link" to={"/blog"}>
-                  Blog{" "}
-                </Link>
-              </Label>
               <h1 className="Post__hero__title">{Post.frontmatter.title}</h1>
             </div>
           </MaxWidth>
