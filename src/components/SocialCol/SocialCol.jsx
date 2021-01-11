@@ -20,10 +20,6 @@ const SocialCol = () => {
         >
           <FontAwesomeIcon icon={faGithub} />
         </Link>
-
-        <Link className="SocialCol__icon" doOpenInNewTab to="">
-          <FontAwesomeIcon icon={faDribbble} />
-        </Link>
         <Link
           className="SocialCol__icon"
           doOpenInNewTab
