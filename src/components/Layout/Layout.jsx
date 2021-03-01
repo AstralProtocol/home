@@ -7,6 +7,12 @@ import SocialCol from "components/SocialCol/SocialCol"
 import Header from "components/Header/Header"
 import { ModalProvider } from "components/_ui/Modal/Modal"
 import "styles/globals.scss"
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import "@fortawesome/fontawesome-svg-core/styles.css"
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false /* eslint-disable import/first */
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
