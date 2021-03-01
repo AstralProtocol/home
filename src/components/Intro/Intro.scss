@@ -61,20 +61,32 @@
     animation-delay: 250ms;
   }
 
-  &__button {
-    opacity: 0;
-    animation: fadeUpSmall 800ms ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 250ms;
-    display: inline-block;
-    position: relative;
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
 
-    &__arrow {
-      position: absolute;
+    &__button {
+      opacity: 0;
+      animation: fadeUpSmall 800ms ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 250ms;
+      width: fit-content;
+
+      &__arrow {
+        position: absolute;
+      }
+
+      &:hover {
+        transform: translateY(10px);
+      }
     }
 
-    &:hover {
-      transform: translateY(10px);
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      grid-gap: 3em;
+
+      text-align: center;
     }
   }
 

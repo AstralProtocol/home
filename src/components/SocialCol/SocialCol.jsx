@@ -4,6 +4,7 @@ import {
   faGithub,
   faTwitter,
   faLinkedinIn,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
 import Link from "components/_ui/Link/Link"
 
@@ -27,14 +28,14 @@ const SocialCol = () => {
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </Link>
-        {/*
-                <Link
+        <Link
           className="SocialCol__icon"
           doOpenInNewTab
-          to="https://codepen.io/marguerite/"
+          to="https://discord.gg/BMKQyP7DrD"
         >
-          <FontAwesomeIcon icon={faCodepen} />
+          <FontAwesomeIcon icon={faDiscord} />
         </Link>
+        {/*
                 <Link
           className="SocialCol__icon"
           doOpenInNewTab

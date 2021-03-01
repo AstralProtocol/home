@@ -16,6 +16,7 @@
     &-xl {
       font-size: 1.15em;
       padding: 1.1em 3em 1.1em;
+      width: 300px;
 
       &:hover {
         transform: translateY(-0.25em);
@@ -66,6 +67,17 @@
       font-weight: bold;
       &:hover {
         box-shadow: 0px 10px 40px $astral-yellow;
+      }
+    }
+
+    &-discord {
+      color: $astral-white;
+      background: #7289da;
+      border: 2px solid white;
+      box-shadow: 0px 14px 49px rgba(0, 0, 0, 0.07);
+      font-weight: bold;
+      &:hover {
+        box-shadow: 0px 10px 40px #7289da;
       }
     }
   }
