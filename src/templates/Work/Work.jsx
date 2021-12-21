@@ -2,18 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 import classNames from "classnames"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Label from "components/_ui/Label/Label"
 import Layout from "components/Layout/Layout"
 import Link from "components/_ui/Link/Link"
-import PageDetail from "components/PageDetail/PageDetail"
-import PageHero from "components/PageHero/PageHero"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import Objectives from "components/Objectives/Objectives"
-import TOC from "components/TOC/TOC"
-import SEO from "components/SEO/SEO"
+import PageDetail from "components/PageDetail/PageDetail"
+import PageHero from "components/PageHero/PageHero"
+import Seo from "components/SEO/Seo"
+import Toc from "components/TOC/Toc"
 import "./Work.scss"
+import Label from "components/_ui/Label/Label"
 
-export default ({ data }) => {
+const Work = ({ data }) => {
   let Work = data.mdx
   let slug = Work.frontmatter.slug
   let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
@@ -27,7 +27,7 @@ export default ({ data }) => {
 
   return (
     <>
-      <SEO
+      <Seo
         title={`${Work.frontmatter.title}`}
         image={ogImagePath}
         twitterImage={twitterImagePath}
@@ -63,7 +63,7 @@ export default ({ data }) => {
                 <Objectives objectives={objectives.body} />
                 <MDXRenderer>{Work.body}</MDXRenderer>
               </div>
-              <TOC className="Work__content__TOC" />
+              <Toc className="Work__content__TOC" />
             </div>
           </MaxWidth>
         </div>
@@ -116,3 +116,4 @@ export const query = graphql`
     }
   }
 `
+export default Work;

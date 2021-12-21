@@ -1,15 +1,15 @@
 import React from "react"
-import Link from "components/_ui/Link/Link"
 import Intro from "components/Intro/Intro"
 import Layout from "components/Layout/Layout"
+import Link from "components/_ui/Link/Link"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import Project from "components/Project/Project"
-import projects from "components/Project/projects.js"
-import SEO from "components/SEO/SEO"
+import Projects from "components/Project/Projects.js"
+import Seo from "components/SEO/Seo"
 
 const Home = () => (
   <Layout showNavigation showSocialCol showFooter>
-    <SEO />
+    <Seo />
     <Intro />
     <MaxWidth className="Home__features">
       <div>
@@ -60,19 +60,19 @@ const Home = () => (
     </MaxWidth>
     <MaxWidth id="work" className="Home__projects">
       <h1>Astral Work</h1>
-      {Object.keys(projects).map((key) => (
+      {Object.keys(Projects).map((key) => (
         <Project
-          demo={projects[key].demo}
-          description={projects[key].description}
-          github={projects[key].github}
-          hasImageBorder={projects[key].hasImageBorder}
-          images={projects[key].img_src}
-          imgType={projects[key].imgType}
-          inspiration={projects[key].inspiration}
-          projectType={projects[key].projectType}
-          tech={projects[key].tech}
-          title={projects[key].title}
-          readMore={projects[key].readMore}
+          demo={Projects[key].demo}
+          description={Projects[key].description}
+          github={Projects[key].github}
+          hasImageBorder={Projects[key].hasImageBorder}
+          images={Projects[key].img_src}
+          imgType={Projects[key].imgType}
+          inspiration={Projects[key].inspiration}
+          projectType={Projects[key].projectType}
+          tech={Projects[key].tech}
+          title={Projects[key].title}
+          readMore={Projects[key].readMore}
           key={key}
         />
       ))}
@@ -88,7 +88,7 @@ const Home = () => (
           >
             <img
               className="Home__backedby__container__item"
-              src={require(`../images/gitcoin.png`)}
+              src={require(`../images/gitcoin.png`).default}
               alt="Gitcoin"
             />
           </Link>
@@ -102,7 +102,7 @@ const Home = () => (
           >
             <img
               className="Home__backedby__container__item"
-              src={require(`../images/filecoin.png`)}
+              src={require(`../images/filecoin.png`).default}
               alt="Filecoin"
             />
           </Link>

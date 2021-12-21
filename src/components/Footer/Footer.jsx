@@ -1,6 +1,6 @@
 import React from "react"
-import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import Link from "components/_ui/Link/Link"
+import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import SpinningImgs from "components/SpinningImgs/SpinningImgs"
 import "./Footer.scss"
 

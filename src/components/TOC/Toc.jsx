@@ -77,6 +77,16 @@ const TOC = ({ className, headingSelector, getTitle, getDepth, ...rest }) => {
                                 (active === index) ? "TOC__link--active" : undefined,
                             )}
                             key={title}
+                            role="link"
+                            tabIndex={0}
+                            onKeyDown={event => {
+                                event.preventDefault()
+                                setOpen(false)
+                                headings.nodes[index].scrollIntoView({
+                                    behavior: `smooth`,
+                                    block: `start`,
+                                })
+                            }}
                             onClick={event => {
                                 event.preventDefault()
                                 setOpen(false)

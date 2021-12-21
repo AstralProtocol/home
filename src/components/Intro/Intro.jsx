@@ -11,7 +11,7 @@ const Intro = () => {
     <MaxWidth size="m" className="Intro">
       <img
         className={classNames("Intro__image_container")}
-        src={require(`images/Transparent-Logo.png`)}
+        src={require(`images/Transparent-Logo.png`).default}
         alt="Project"
       />
       <h3 className="Intro__subheader">

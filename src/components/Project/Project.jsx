@@ -120,7 +120,8 @@ const Project = ({
                   className={classNames("Project__image", {
                     "Project__image--hasBorder": hasImageBorder,
                   })}
-                  src={require(`./images/${image}.png`)}
+
+                  src={require(`./images/${image}.png`).default}
                   alt="Project"
                 />
                 {demo && (

@@ -47,7 +47,7 @@ class Spinner extends Component {
         onMouseLeave={mouseEventsEnabled ? this.onMouseLeave : null}
       >
         <img
-          src={require(`./img-${img}.png`)}
+          src={require(`./img-${img}.png`).default}
           alt="Spinning img"
           className="Spinner"
         />

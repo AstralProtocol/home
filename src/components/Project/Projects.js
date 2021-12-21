@@ -1,6 +1,24 @@
 import React from "react";
 
-const projects = {
+const Projects = {
+    Kolektivo: {
+        title: "Kolektivo",
+        projectType: "sdApp",
+        description: <div>
+            Decentralized Exchange Trading System Pilot on Curaçao.
+        </div>,
+        
+        github: "https://github.com/astralprotocol",
+        "tech": [
+            "web3",
+            "solidity",
+            "celo"
+        ],
+        hasImageBorder: false,
+        "img_src": [
+            "project-kolektivo"
+        ],
+    },    
     hyperaware: {
         title: "Hyperaware",
         projectType: "sdApp",
@@ -82,4 +100,4 @@ const projects = {
     },
 };
 
-export default projects;
+export default Projects;
