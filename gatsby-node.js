@@ -82,6 +82,9 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
 
+    const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+    createRedirect({ fromPath: '/discord', toPath: 'https://discord.gg/9Kv8tRvWVG', redirectInBrowser: true, isPermanent: true });
+
  /*
     const blogPost = path.resolve(`src/templates/Post/Post.jsx`);
     const blogPosts = await graphql(`
