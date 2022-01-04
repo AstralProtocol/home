@@ -28,10 +28,10 @@ const Header = ({ knockoutHeader }) => (
             className="Header__link"
             to={"https://docs.astral.global"}
           >
-            Docs
+            Litepaper
           </Link>
           <Link className="Header__link" to={"/#work"}>
-            Work
+            Projects
           </Link>
           {/* hidden for now
           <Link className="Header__link" to={"/blog"}>

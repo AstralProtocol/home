@@ -26,7 +26,7 @@ const Intro = () => {
           buttonProps={{ size: "xl", color: "astral-yellow" }}
           to="https://docs.astral.global"
         >
-          Read the docs
+          Read our Litepaper
         </Link>
         <Link
           doOpenInNewTab
