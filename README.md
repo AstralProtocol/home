@@ -1,4 +1,4 @@
-# Astral Landing [![Netlify Status](https://api.netlify.com/api/v1/badges/94589a2f-f57d-4390-a4d4-429eb54b8a67/deploy-status)](https://app.netlify.com/sites/nervous-shannon-b45865/deploys)
+# Astral Landing
 
 ## Install Gatsby Globally
 
@@ -26,11 +26,27 @@ yarn && yarn build
 
 ## Fleek Deploy
 
+Login to Fleek with GitHub
+
 - Docker image: `fleek/gatsby`
 
 - Build command: `yarn && yarn build`
 
 - Publish directory: `public`
+
+## DNS
+
+- Cloudflare nameservers: `kristin.ns.cloudflare.com` and `nitin.ns.cloudflare.com`
+
+- DNS Settings for Cloudflare
+  
+  - `CNAME astral.global 29be39ce0720784146fd.b-cdn.net`
+
+  - `CNAME _dnslink _dnslink.broad-morning-5527.on.fleek.co`
+
+  - `CNAME www 29be39ce0720784146fd.b-cdn.net`
+
+  - `CNAME _dnslink.www _dnslink.broad-morning-5527.on.fleek.co`
 
 ## References
 
