@@ -12,7 +12,7 @@ const Footer = () => {
           <SpinningImgs />
         </div>
         <div className="Footer__copyright__container">
-          <span className="Footer__copyright">&copy; 2021 Astral — </span>
+          <span className="Footer__copyright">&copy; 2022 Graticule Labs LLC — </span>
           <Link
             className="Footer__copyright__link"
             href="https://github.com/margueriteroth"
