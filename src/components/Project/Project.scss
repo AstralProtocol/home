@@ -68,7 +68,7 @@
 
     &__title {
       margin-bottom: 1.2em;
-      color: $astral-yellow;
+      color: $astral-primary;
     }
   }
 
@@ -97,7 +97,7 @@
               content: "";
               width: 100%;
               height: 100%;
-              background: rgba($astral-yellow, 0.1);
+              background: rgba($astral-primary, 0.1);
               z-index: -1;
               top: 0;
               left: 0;

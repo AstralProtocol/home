@@ -13,7 +13,7 @@
     content: "";
     height: 4em;
     width: 3px;
-    background: $astral-yellow;
+    background: $astral-primary;
     position: absolute;
     bottom: 0;
     transform: translateX(9px);
@@ -33,7 +33,7 @@
     }
 
     &:hover {
-      color: $astral-yellow;
+      color: $astral-primary;
       transition: 100ms all ease-in-out;
 
       svg {

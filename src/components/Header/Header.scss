@@ -147,7 +147,7 @@
 
     &--donate {
       font-weight: 1000;
-      color: $astral-yellow;
+      color: $astral-primary;
       span {
         display: inline-block;
         transition: transform 300ms ease-in-out;
@@ -155,7 +155,7 @@
       }
 
       &:hover {
-        color: $astral-yellow;
+        color: $astral-primary;
         span {
           opacity: 1;
           transform: translateX(6px);

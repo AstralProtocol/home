@@ -61,12 +61,12 @@
 
     &-astral-yellow {
       color: $astral-black;
-      background: $astral-yellow;
+      background: $astral-primary;
       border: 2px solid white;
       box-shadow: 0px 14px 49px rgba(0, 0, 0, 0.07);
       font-weight: bold;
       &:hover {
-        box-shadow: 0px 10px 40px $astral-yellow;
+        box-shadow: 0px 10px 40px $astral-primary;
       }
     }
 
