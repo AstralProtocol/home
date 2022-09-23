@@ -109,15 +109,6 @@ class BookshelfContainer extends Component {
                 <p>
                     What I'm reading and what I've read.
                 </p>
-                {/* <Button onClick={this.toggleBookListStyle} style={{"marginBottom": "10px"}}>
-                    Change to {bookListRows ? "cards" : "rows"}
-                </Button> */}
-                {/* <div className="Bookshelf__genres__container">
-                    <BookGenreCharts
-                        books={books}
-                        genres={genres}
-                        categories={categories} />
-                </div> */}
                 <Bookshelf
                     books={books}
                     booksToShow={booksToShow}

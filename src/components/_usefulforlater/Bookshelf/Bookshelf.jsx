@@ -54,7 +54,7 @@ class Bookshelf extends Component {
                                 I'm still digging through my <strong>read</strong> archive <span className="emoji--small" role="img" aria-label="emoji">😊</span>
                             </p>
                         )}
-                        <Button className="Bookshelf__action__button" category="secondary" onClick={showMoreBooks}>
+                        <Button className="Bookshelf__action__button" category="filled" onClick={showMoreBooks}>
                             Show {expanded ? "less" : "more"}
                         </Button>
                     </div>

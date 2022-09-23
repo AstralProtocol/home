@@ -13,10 +13,11 @@
     content: "";
     height: 4em;
     width: 3px;
-    background: $astral-primary;
+    background: $white;
+    opacity: 0.4;
     position: absolute;
     bottom: 0;
-    transform: translateX(9px);
+    transform: translateX(22.5px);
   }
 
   &__icon {
@@ -29,17 +30,9 @@
     padding: 0.25em;
 
     svg {
+      font-size: 20px;
+      color: $white;
       transition: 200ms all ease-in-out;
-    }
-
-    &:hover {
-      color: $astral-primary;
-      transition: 100ms all ease-in-out;
-
-      svg {
-        transform: translateY(-3px);
-        transition: 200ms all ease-in-out;
-      }
     }
 
     &s {

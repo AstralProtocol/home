@@ -60,9 +60,6 @@ export function Modal({ className, onClose, children, useCloseButton, ...props }
                                 </Button>
                             </>
                         )}
-                        {/* <button onClick={onClose}>
-                            Close
-                        </button> */}
                     </div>
                 </div>
            </div>,

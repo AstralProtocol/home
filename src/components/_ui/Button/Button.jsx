@@ -7,31 +7,23 @@ import './Button.scss';
 
 class Button extends Component {
     static propTypes = {
-        category: PropTypes.oneOf(['primary', 'secondary', 'secondary--white']),
-        size: PropTypes.oneOf(['xl', 'l', 'm', 's']),
-        shape: PropTypes.oneOf(['round', 'square']),
+        category: PropTypes.oneOf(['filled', 'outlined'])
     };
 
     static defaultProps = {
-        category: 'primary',
-        size: 's',
-        shape: 'square',
-        color: 'blue',
+        category: 'filled',
     };
 
     getClassName() {
-        const { category, size, shape, color, className } = this.props;
+        const { category, className } = this.props;
         return classNames(className,
             'Button',
             `Button--${category}`,
-            `Button--size-${size}`,
-            `Button--shape-${shape}`,
-            `Button--color-${color}`
         );
     }
 
     render() {
-        const { category, shape, size, children, color, className, ...props } = this.props;
+        const { category, children, className, ...props } = this.props;
         return (
             <button
                 onClick={this.props.onClick}

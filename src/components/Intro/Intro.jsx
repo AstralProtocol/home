@@ -23,8 +23,8 @@ const Intro = () => {
           doOpenInNewTab
           isButton
           className="Intro__buttons_button"
-          buttonProps={{ size: "xl", color: "astral-yellow" }}
-          to="https://docs.astral.global"
+          buttonProps={{ category: "filled" }}
+          // to="https://docs.astral.global"
         >
           Read our Litepaper
         </Link>
@@ -32,13 +32,10 @@ const Intro = () => {
           doOpenInNewTab
           isButton
           className="Intro__buttons_button"
-          buttonProps={{ size: "xl", color: "discord" }}
-          to="https://discord.gg/BMKQyP7DrD"
+          buttonProps={{ category: "outlined" }}
+          // to="https://discord.gg/BMKQyP7DrD"
         >
-          <span>
-            <FontAwesomeIcon icon={faDiscord} />
-          </span>
-          <span> Join us!</span>
+          Join us!
         </Link>
       </div>
     </MaxWidth>
