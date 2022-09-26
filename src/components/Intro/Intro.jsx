@@ -9,11 +9,6 @@ import "./Intro.scss"
 const Intro = () => {
   return (
     <MaxWidth size="m" className="Intro">
-      <img
-        className={classNames("Intro__image_container")}
-        src={require(`images/Transparent-Logo.png`).default}
-        alt="Project"
-      />
       <h3 className="Intro__subheader">
         At Astral we are building tools to enable the location-based
         decentralized web.
@@ -24,7 +19,7 @@ const Intro = () => {
           isButton
           className="Intro__buttons_button"
           buttonProps={{ category: "filled" }}
-          // to="https://docs.astral.global"
+          to="https://docs.astral.global"
         >
           Read our Litepaper
         </Link>
@@ -33,7 +28,7 @@ const Intro = () => {
           isButton
           className="Intro__buttons_button"
           buttonProps={{ category: "outlined" }}
-          // to="https://discord.gg/BMKQyP7DrD"
+          to="https://discord.gg/BMKQyP7DrD"
         >
           Join us!
         </Link>

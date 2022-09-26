@@ -2,7 +2,6 @@
 
 .MaxWidth {
     &--size {
-        //MaxWidth 740px
         &-xs {
             max-width: $post-max-width;
             margin: 0 auto;
@@ -35,7 +34,7 @@
             max-width: 1300px;
             margin: 0 auto;
             width: 100%;
-            padding-left: 4em;
+            padding-left: 180px;
             padding-right: 4em;
 
             @media(max-width: 1400px) {
@@ -50,12 +49,7 @@
                 padding-left: 1.25em;
                 padding-right: 1.25em;
             }
-        }
-
-        // //MaxWidth 100% but without padding bleed
-        // &-ml {
-        //     width: 100%;
-        // }
+        }}
 
         //Full width, left/right padding
         &-l {
@@ -78,5 +72,4 @@
                 padding-right: 1.25em;
             }
         }
-    }
 }

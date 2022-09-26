@@ -36,7 +36,7 @@ const SocialCol = () => {
             doOpenInNewTab
             isButton
             buttonProps={{ category: "icon" }}
-            // to={url}
+            to={url}
           >
             <FontAwesomeIcon size="lg" icon={icon} />
           </Link>

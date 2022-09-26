@@ -59,23 +59,10 @@ const Home = () => (
       </div>
     </MaxWidth>
     <MaxWidth id="work" className="Home__projects">
-      <h1>Astral Work</h1>
-      {Object.keys(Projects).map((key) => (
-        <Project
-          demo={Projects[key].demo}
-          description={Projects[key].description}
-          github={Projects[key].github}
-          hasImageBorder={Projects[key].hasImageBorder}
-          images={Projects[key].img_src}
-          imgType={Projects[key].imgType}
-          inspiration={Projects[key].inspiration}
-          projectType={Projects[key].projectType}
-          tech={Projects[key].tech}
-          title={Projects[key].title}
-          readMore={Projects[key].readMore}
-          key={key}
-        />
-      ))}
+      <Project 
+        {...Projects.hyperaware}
+        images={Projects.hyperaware.img_src}
+      />
     </MaxWidth>
     <MaxWidth className="Home__backedby">
       <h1>Supported by</h1>
