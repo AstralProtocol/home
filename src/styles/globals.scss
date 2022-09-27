@@ -4,6 +4,9 @@
 //@import "./prism-base16-ateliersulphurpool.light.css";
 @import "./prism-nord.css";
 
+$font-primary: 'Libre Baskerville';
+$font-secondary: 'Lato';
+
 html,
 body,
 #root {
@@ -202,6 +205,11 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
 
+    &__title {
+      font-family: $font-primary;
+      font-size: 34px;
+    }
+
     &__item {
       text-decoration: none;
       display: flex;
@@ -214,6 +222,10 @@ button {
 
       &:hover {
         background: $space-black;
+      }
+
+      &__subtitle {
+        font-family: $font-secondary;
       }
     }
 
