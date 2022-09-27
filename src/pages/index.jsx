@@ -1,5 +1,6 @@
 import React from "react"
 import Intro from "components/Intro/Intro"
+import Features from "components/Features/Features"
 import Layout from "components/Layout/Layout"
 import Link from "components/_ui/Link/Link"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
@@ -11,53 +12,7 @@ const Home = () => (
   <Layout showNavigation showSocialCol showFooter>
     <Seo />
     <Intro />
-    <MaxWidth className="Home__features">
-      <div>
-        <h2>Data</h2>
-        <Link
-          to="https://docs.astral.global/geodids/geodid-intro"
-          className="Home__features__item"
-        >
-          <div>
-            <h3>Spatial data, immutably stored</h3>
-            <p>
-              We have developed GeoDIDs, the primitive for representing raster
-              and vector spatial data on IPFS. Read the documentation.
-            </p>
-          </div>
-        </Link>
-      </div>
-      <div>
-        <h2>Oracle</h2>
-        <Link
-          to="https://docs.astral.global/astral-protocol/oracles"
-          className="Home__features__item"
-        >
-          <div>
-            <h3>Bridge the real-world with web3.</h3>
-            <p>
-              Building the oracle systems to trustlessly fetch spatial data and
-              analytics into spatial contracts and location-based dApps.
-            </p>
-          </div>
-        </Link>
-      </div>
-      <div>
-        <h2>Smart Contracts</h2>
-        <Link
-          to="https://docs.astral.global/astral-protocol/spatial-contracts"
-          className="Home__features__item"
-        >
-          <div>
-            <h3>Location-based dApps</h3>
-            <p>
-              We're developing libraries and tools to make using spatial data in
-              smart contracts simple and intuitive.
-            </p>
-          </div>
-        </Link>
-      </div>
-    </MaxWidth>
+    <Features />
     <MaxWidth id="work" className="Home__projects">
       <Project 
         {...Projects.hyperaware}
