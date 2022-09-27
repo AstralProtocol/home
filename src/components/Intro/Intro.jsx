@@ -9,7 +9,7 @@ import "./Intro.scss"
 const Intro = () => {
   return (
     <MaxWidth size="m" className="Intro">
-      <h3 className="Intro__subheader">
+      <h3 className="Intro__header">
         At Astral we are building tools to enable the location-based
         decentralized web.
       </h3>
