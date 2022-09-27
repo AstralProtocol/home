@@ -1,8 +1,20 @@
 import React from "react"
-import Link from "components/_ui/Link/Link"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import "./Features.scss"
 
+const Features = () => {
+  return (
+    <MaxWidth className="Features__container">
+      {features.map(feature => (
+        <a href={feature.link} className="Features__item">
+          <h2 className="Features__item__title">{feature.title}</h2>
+          <h3 className="Features__item__subtitle">{feature.subtitle}</h3>
+          <p className="Features__item__description">{feature.description}</p>
+        </a>
+      ))}
+    </MaxWidth>
+  )
+}
 
 const features = [
   {
@@ -22,27 +34,6 @@ const features = [
     link: "https://docs.astral.global/astral-protocol/spatial-contracts",
   }
 ]
-
-const Features = () => {
-  return (
-    <MaxWidth className="Home__features">
-      {features.map(feature => (
-        <div>
-          <h2 className="Home__features__title">{feature.title}</h2>
-          <Link
-            to={feature.link}
-            className="Home__features__item"
-          >
-            <div>
-              <h3 className="Home__features__subtitle">{feature.subtitle}</h3>
-              <p className="Home__features__description">{feature.description}</p>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </MaxWidth>
-  )
-}
 
 Features.propTypes = {}
 
