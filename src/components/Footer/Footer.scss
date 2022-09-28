@@ -17,6 +17,7 @@
   letter-spacing: 0.065em;
   text-transform: uppercase;
   z-index: 9999999;
+  position: relative;
 
   @media (max-width: 850px) {
     flex-direction: column;
@@ -35,14 +36,6 @@
       @media (max-width: 850px) {
         font-size: 9px;
         text-align: center;
-      }
-    }
-
-    &__link {
-      text-decoration: none;
-
-      &:hover {
-        opacity: 1;
       }
     }
 
