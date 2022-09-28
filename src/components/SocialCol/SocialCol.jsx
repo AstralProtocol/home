@@ -10,22 +10,6 @@ import Link from "components/_ui/Link/Link"
 
 import "./SocialCol.scss"
 
-const icons = [
-  {
-    icon: faGithub,
-    url: "https://github.com/AstralProtocol"
-  },   {
-    icon: faLinkedinIn,
-    url: "https://www.linkedin.com/company/astralprotocol/"
-  },   {
-    icon: faDiscord,
-    url: "https://discord.gg/BMKQyP7DrD"
-  },   {
-    icon: faTwitter,
-    url: "https://twitter.com/astralprotocol"
-  }
-]
-
 const SocialCol = () => {
   return (
     <div className="SocialCol">
@@ -42,8 +26,25 @@ const SocialCol = () => {
           </Link>
         ))}
       </div>
+      <div className="SocialCol__separator"></div>
     </div>
   )
 }
+
+const icons = [
+  {
+    icon: faGithub,
+    url: "https://github.com/AstralProtocol"
+  },   {
+    icon: faLinkedinIn,
+    url: "https://www.linkedin.com/company/astralprotocol/"
+  },   {
+    icon: faDiscord,
+    url: "https://discord.gg/BMKQyP7DrD"
+  },   {
+    icon: faTwitter,
+    url: "https://twitter.com/astralprotocol"
+  }
+]
 
 export default SocialCol

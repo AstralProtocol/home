@@ -4,19 +4,22 @@
   position: fixed;
   bottom: 0;
   left: $padding-horizontal;
+  z-index: -1;
 
   @media (max-width: 600px) {
     display: none;
   }
 
-  &:before {
+  &::after {
     content: "";
     height: 4em;
     width: 3px;
     background: $white;
     opacity: 0.4;
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    display: block;
+    // bottom: 0;
+    z-index: 1;
     transform: translateX(22.5px);
   }
 
@@ -40,7 +43,15 @@
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      margin-bottom: 4em;
+      margin-bottom: 1em;
     }
   }
+
+  // &__separator {
+  //   height: 40px;
+  //   width: 3px;
+  //   background-color: red;
+  //   z-index: -1;
+  //   position: relative;
+  // }
 }
