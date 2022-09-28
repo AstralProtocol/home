@@ -5,8 +5,8 @@ import "./Features.scss"
 const Features = () => {
   return (
     <MaxWidth className="Features__container">
-      {features.map(feature => (
-        <a href={feature.link} className="Features__item">
+      {features.map((feature, index) => (
+        <a key={index} href={feature.link} className="Features__item">
           <h2 className="Features__item__title">{feature.title}</h2>
           <h3 className="Features__item__subtitle">{feature.subtitle}</h3>
           <p className="Features__item__description">{feature.description}</p>
