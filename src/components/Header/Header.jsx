@@ -23,42 +23,37 @@ const Header = ({ knockoutHeader }) => (
           />
         </Link>
         <div className="Header__links">
-          <Link
-            doOpenInNewTab
-            className="Header__link"
-            to={"https://docs.astral.global"}
-          >
-            Litepaper
-          </Link>
-          <Link className="Header__link" to={"/#work"}>
-            Projects
-          </Link>
-          {/* hidden for now
-          <Link className="Header__link" to={"/blog"}>
-            Blog
-          </Link>
-          */}
-          <Link
-            doOpenInNewTab
-            className="Header__link Header__link--email"
-            to="mailto:contact@astral.global"
-          >
-            Contact
-            <span>&#8594;</span>
-          </Link>
-          <Link
-            doOpenInNewTab
-            className="Header__link Header__link--donate"
-            to="https://gitcoin.co/grants/1102/astral"
-          >
-            Donate
-            <span>&#8594;</span>
-          </Link>
+          {links.map((link, index) => (
+            <Link
+              doOpenInNewTab
+              className="Header__link"
+              to={link.url}
+              key={index}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       </div>
     </MaxWidth>
   </Headroom>
 )
+
+const links = [
+  {
+    name: "Litepaper",
+    url: "https://docs.astral.global",
+  }, {
+    name: "Projects",
+    url: "/#work",
+  }, {
+    name: "Contact",
+    url: "mailto:contact@astral.global",
+  }, {
+    name: "Donate",
+    url: "https://gitcoin.co/grants/1102/astral",
+  }
+]
 
 Header.propTypes = {
   knockoutHeader: PropTypes.bool,

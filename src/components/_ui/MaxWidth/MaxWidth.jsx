@@ -11,7 +11,7 @@ const MaxWidth = ({children, id, className, size}) => {
             {children}
         </div>
     );
-};
+}
 
 MaxWidth.propTypes = {
     children: PropTypes.node.isRequired,
