@@ -188,66 +188,6 @@ button {
 }
 
 .Home {
-  &__backedby {
-    padding-top: 10vh;
-    padding-bottom: 8em;
-
-    h1 {
-      text-align: center;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    p {
-      margin-top: 0.5em;
-    }
-
-    &__container {
-      h2 {
-        text-align: center;
-      }
-
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2em;
-      justify-items: center;
-      align-items: center;
-      padding-top: 10vh;
-      padding-bottom: 8em;
-
-      &__link {
-        &:hover {
-          .Home__backedby__container__item {
-            opacity: 0.15;
-            transition: all 100ms ease-out;
-          }
-
-          &:after {
-            transition: all 100ms ease-out;
-            opacity: 1;
-          }
-        }
-      }
-
-      &__item {
-        max-width: 10vw;
-        height: auto;
-
-        @media (max-width: 1000px) {
-          max-width: 40vw;
-          height: auto;
-        }
-      }
-
-      @media (max-width: 1000px) {
-        grid-template-columns: 1fr;
-        grid-gap: 3em;
-      }
-    }
-  }
-
   &__projects {
     margin-top: 0vh;
     padding-top: 10vh;
