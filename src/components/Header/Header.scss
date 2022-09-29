@@ -51,8 +51,10 @@
     }
 
     &__container {
-      max-width: 50%;
+      width: 173px;
       display: block;
+      margin-bottom: 0;
+
       @media (max-width: 1100px) {
         max-width: 50%;
       }

@@ -18,7 +18,7 @@ const Header = ({ knockoutHeader }) => (
         <Link className="Header__logo" to="/">
           <img
             className={classNames("Header__logo__container")}
-            src={require(`images/Transparent-Symbol.png`).default}
+            src={require(`images/astral-logo.svg`).default}
             alt="Logo"
           />
         </Link>
