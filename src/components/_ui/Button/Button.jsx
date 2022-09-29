@@ -7,7 +7,7 @@ import './Button.scss';
 
 class Button extends Component {
     static propTypes = {
-        category: PropTypes.oneOf(['filled', 'outlined'])
+        category: PropTypes.oneOf(['filled', 'outlined', 'icon'])
     };
 
     static defaultProps = {

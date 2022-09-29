@@ -14,10 +14,11 @@ const Home = () => (
     <Intro />
     <Features />
     <MaxWidth id="work" className="Home__projects">
-      {Object.entries(Projects).map(([key, value]) => (
+      {Object.entries(Projects).map(([key, value], index) => (
         <Project
           {...value}
           images={value.img_src}
+          key={index}
         />
       ))}
     </MaxWidth>

@@ -14,13 +14,14 @@ const SocialCol = () => {
   return (
     <div className="SocialCol">
       <div className="SocialCol__icons">
-        {icons.map(({ icon, url }) => (
+        {icons.map(({ icon, url }, index) => (
           <Link
             className="SocialCol__icon"
             doOpenInNewTab
             isButton
             buttonProps={{ category: "icon" }}
             to={url}
+            key={index}
           >
             <FontAwesomeIcon size="lg" icon={icon} />
           </Link>
