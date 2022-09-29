@@ -14,10 +14,12 @@ const Home = () => (
     <Intro />
     <Features />
     <MaxWidth id="work" className="Home__projects">
-      <Project 
-        {...Projects.hyperaware}
-        images={Projects.hyperaware.img_src}
-      />
+      {Object.entries(Projects).map(([key, value]) => (
+        <Project l
+          {...value}
+          images={value.img_src}
+        />
+      ))}
     </MaxWidth>
     <MaxWidth className="Home__backedby">
       <h1>Supported by</h1>

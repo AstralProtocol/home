@@ -37,27 +37,12 @@ const Project = ({
           <div className="Project__info__container">
             <h2 className="Project__title">{title}</h2>
             <div className="Project__about">
-              {inspiration && (
-                <div className="Project__inspiration">
-                  <h4 clas3sName="Project__inspiration__title">Inspired by:</h4>
-                  <a
-                    className="Project__inspiration__link"
-                    href={inspiration.link_src}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {inspiration.title}
-                  </a>
-                </div>
-              )}
-              <span>{/* {inspiration.title} */}</span>
               {demo && (
-                <p>
+                <p className="Project__about__button">
                   <Link
                     to={demo}
                     isButton
                     doOpenInNewTab
-                    buttonProps={{ color: "astral-yellow", size: "l" }}
                   >
                     Demo
                   </Link>
@@ -66,11 +51,10 @@ const Project = ({
               <div>{description}</div>
 
               {readMore && (
-                <p>
+                <p className="Project__about__button">
                   <Link
                     to={readMore}
                     isButton
-                    buttonProps={{ color: "astral-yellow", size: "l" }}
                   >
                     Read More
                   </Link>
@@ -78,15 +62,15 @@ const Project = ({
               )}
 
               {github && (
-                <p>
+                <p className="Project__about__github">
                   <FontAwesomeIcon
-                    className="Project__link__icon"
+                    className="Project__about__github__icon"
                     icon={faGithub}
                   />
                   <Link
                     doOpenInNewTab
                     to={github}
-                    className="Project__inspiration__link"
+                    className="Project__about__github__link"
                   >
                     Github
                   </Link>
