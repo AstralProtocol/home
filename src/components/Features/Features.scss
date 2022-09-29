@@ -21,10 +21,17 @@
     width: fit-content;
     padding: 24px;
     border-radius: 8px;
-
+    transition: background-position .3s;
+    transition: box-shadow .2s ease-out;
+    
     &:hover {
-      filter: drop-shadow(0px 0px 30px rgba(0, 139, 234, 0.2));
-      backdrop-filter: blur(88px);
+      // filter: drop-shadow(0px 0px 30px rgba(0, 139, 234, 0.2));
+      // backdrop-filter: blur(88px);
+      box-shadow: 0 0 20px 5px rgba(0, 139, 234, 0.2);
+      background-image: url("./background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &__title {
