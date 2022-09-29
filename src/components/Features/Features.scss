@@ -43,11 +43,12 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top left;
+      border-radius: 8px;
       transition: background-position .3s;
     }
 
     &::after {
-      background-color: $secondary-main;
+      background-color: $background;
     }
     
     &:hover {

@@ -9,7 +9,7 @@ import Supporters from "components/Supporters/Supporters"
 import Seo from "components/SEO/Seo"
 
 const Home = () => (
-  <Layout showNavigation showSocialCol showFooter>
+  <Layout showNavigation showSocialCol showFooter className="Home">
     <Seo />
     <Intro />
     <Features />

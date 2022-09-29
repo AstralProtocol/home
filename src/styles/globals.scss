@@ -13,7 +13,9 @@ body,
 }
 
 body {
-  background: $secondary-light;
+  // background: $secondary-light;
+  // background-color: rgba(105, 75, 255, 1);
+  background-color: $background;
   width: 100%;
   margin: 0 auto;
   font-family: $font-primary, sans-serif;
@@ -188,6 +190,13 @@ button {
 }
 
 .Home {
+  @at-root body {
+    background-image: url('images/home-background.png');
+    background-size: 100% 1000px;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
   &__projects {
     margin-top: 0vh;
     padding-top: 10vh;
