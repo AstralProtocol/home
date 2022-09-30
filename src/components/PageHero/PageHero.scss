@@ -10,6 +10,7 @@
   overflow: hidden;
   padding: 6em 2em 1.5em;
   position: relative;
+  border-radius: 12px;
 
   @media (max-width: 1100px) {
     padding-top: 4em;
@@ -69,6 +70,10 @@
       width: 100%;
       padding-left: 3em;
       padding-right: 3em;
+      
+      > * {
+        border-radius: 12px !important;
+      }
 
       @media (max-width: 1100px) {
         grid-template-columns: 2fr 0 1fr;
