@@ -29,8 +29,8 @@ const Supporters = () => {
   )
 }
 
-const gitcoinImage = require(`../../images/gitcoin.png`).default;
-const filecoinImage = require(`../../images/filecoin.png`).default;
+const gitcoinImage = require(`../../images/gitcoin.svg`).default;
+const filecoinImage = require(`../../images/filecoin.svg`).default;
 
 const supporters = [
   {
