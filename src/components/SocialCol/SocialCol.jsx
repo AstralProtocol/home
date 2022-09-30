@@ -13,7 +13,7 @@ import "./SocialCol.scss"
 const SocialCol = () => {
   return (
     <div className="SocialCol">
-      <div className="SocialCol__icons">
+      <div>
         {icons.map(({ icon, url }, index) => (
           <Link
             className="SocialCol__icon"

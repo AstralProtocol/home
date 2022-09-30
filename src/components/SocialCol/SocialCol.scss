@@ -32,11 +32,12 @@
   &__separator {
     $width: 3px;
 
-    height: 48px;
+    height: 64px;
     width:$width;
     background: $white;
     opacity: 0.4;
     display: block;
+    margin-top: 0.5rem;
     transform: translateX(#{$width / 2});
   }
 }
