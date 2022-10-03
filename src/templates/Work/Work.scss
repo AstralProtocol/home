@@ -130,10 +130,21 @@
     line-height: 165%;
   }
 
+  .gatsby-highlight {
+    background-image: url("../../images/background-feature.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    box-shadow: $box-shadow__feature;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+
   pre {
-    //background: rgba(0, 0, 0, .05);
+    margin: 0;
     padding: 20px;
     white-space: pre-wrap;
+    background-color: transparent;
   }
 
   img {
