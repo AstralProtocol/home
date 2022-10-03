@@ -233,6 +233,8 @@
     display: grid;
     grid-template-columns: 11em 1fr 11em;
     grid-gap: 4em;
+    padding-left: 3em;
+    padding-right: 3em;
 
     @media (min-width: 1200px) {
       padding-left: 3em;
