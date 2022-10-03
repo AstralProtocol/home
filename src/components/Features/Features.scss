@@ -39,7 +39,7 @@
       hover, and the first time it takes a little bit, causing a flickering
     */
     &::before {
-      background-image: url("./background.png");
+      background-image: url("../../images/background-feature.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top left;
@@ -54,7 +54,7 @@
     &:hover {
       // filter: drop-shadow(0px 0px 30px rgba(0, 139, 234, 0.2));
       // backdrop-filter: blur(88px);
-      box-shadow: 0 0 20px 5px rgba(0, 139, 234, 0.2);
+      box-shadow: $box-shadow__feature;
 
       &::before {
         background-position: center;

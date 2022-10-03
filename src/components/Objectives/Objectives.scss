@@ -1,37 +1,42 @@
 @import "./../../styles/lib";
 
 .Objectives {
-  background: $space-black;
+  // background: $space-black;
   max-width: $post-max-width;
   margin: 0 auto;
-  padding: 1.5em 1em 1em;
-  border-radius: 6px;
+  padding: 36px !important;
+  border-radius: 24px;
   margin-top: 1rem;
+  background-image: url("../../images/background-feature.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+  box-shadow: $box-shadow__feature;
 
   h2 {
-    padding-top: 0.5rem !important;
-    //font-size: 1.625em !important;
+    padding: 0 !important;
+    margin-bottom: 1.25rem !important;
   }
 
   ul {
     list-style: none;
     padding: 0;
     padding-left: 20px;
-    margin: 0;
+    margin: 0 !important;
 
     li {
       line-height: 155%;
       margin-bottom: 0.9em;
       padding-left: 7px;
       text-indent: -2.85rem;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
     }
 
     @media (max-width: 600px) {
       padding-left: 0;
-    }
-
-    li::before {
-      content: "⭐ ";
     }
   }
 

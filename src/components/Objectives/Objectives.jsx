@@ -5,7 +5,7 @@ import './Objectives.scss';
 
 
 const Objectives = ({children, className, objectives}) => {
-
+    console.log("Objectives: ", objectives);
     return (
         <div
             className="Objectives__container">
