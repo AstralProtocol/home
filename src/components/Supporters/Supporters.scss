@@ -2,7 +2,6 @@
 
 .Supporters {
   padding-top: 10vh;
-  padding-bottom: 8em;
 
   h2 {
     text-align: center;
@@ -40,12 +39,12 @@
     justify-items: center;
     align-items: center;
     padding-top: 10vh;
-    padding-bottom: 8em;
+    padding-bottom: 6em;
 
     &__link {
       &:hover {
         .Supporters__container__item {
-          opacity: 0.15;
+          opacity: 0.75;
           transition: all 100ms ease-out;
         }
 
