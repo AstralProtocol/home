@@ -29,44 +29,32 @@
     border-radius: 8px;
     transition: box-shadow .2s ease-out;
 
-    &::before,
-    &::after {
+    // Background image is applied to a before element and set to hidden by default. 
+    // Then, it's set to visible on hover. This way, the image is loaded on component render 
+    // instead of on hover, avoiding image flickering
+    &::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
-    }
-    
-    /* Userd background-image in ::before tag to preload the image. If not, image is loaded on 
-      hover, and the first time it takes a little bit, causing a flickering
-    */
-    &::before {
       background-image: url("../../images/background-feature.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top left;
-      border-radius: 8px;
+      visibility: hidden;
       transition: background-position .3s;
-    }
-
-    &::after {
-      background-color: $background;
+      z-index: -1;
     }
     
     &:hover {
-      // filter: drop-shadow(0px 0px 30px rgba(0, 139, 234, 0.2));
-      // backdrop-filter: blur(88px);
       box-shadow: $box-shadow__feature;
+      border-radius: 8px;
 
       &::before {
+        visibility: visible;
         background-position: center;
-      }
-
-      &::after {
-        background-color: transparent;
       }
     }
 
