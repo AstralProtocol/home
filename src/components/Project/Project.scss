@@ -315,4 +315,10 @@
       margin-top: -2em;
     }
   }
+
+  @media (max-width: 900px) {
+    &__container {
+      grid-gap: 40px;
+    }
+  }
 }
