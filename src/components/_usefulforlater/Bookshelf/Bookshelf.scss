@@ -99,7 +99,7 @@
     }
 
     &__genres__container {
-        @media(max-width: 500px) {
+        @media(max-width: $media-mobile) {
             display: none;
         }
     }

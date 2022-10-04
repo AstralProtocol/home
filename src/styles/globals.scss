@@ -89,7 +89,7 @@ a {
   color: currentColor;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $media-tablet) {
   h1 {
     font-size: 2.5em;
   }

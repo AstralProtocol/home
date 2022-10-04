@@ -1,22 +1,19 @@
 @import "../../styles/lib.scss";
 
 .Intro {
-  // height: calc(#{100vh});
-  height: calc(#{100vh} - 90px);
+  $header-height: 90px;
+
+  height: calc(100vh - #{$header-height});
   color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: $media-mobile) {
     min-height: 27em;
     padding-top: 20%;
     margin-bottom: 3rem;
     justify-content: start;
-  }
-
-  @media (max-width: 768px) {
-    // min-height: calc(#{100vh} - 170px);
   }
 
   &__header {
@@ -33,7 +30,7 @@
     animation-fill-mode: forwards;
     animation-delay: 250ms;
 
-    @media (max-width: 500px) {
+    @media (max-width: $media-mobile) {
       font-size: 2.25rem;
     }
   }
