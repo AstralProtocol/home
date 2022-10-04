@@ -35,6 +35,10 @@
 
   &__container {
     padding: 1.5em 4em;
+
+    @media (max-width: 500px) {
+      padding: 1.5em 0;
+    }
   }
 
   &__content {
@@ -45,6 +49,10 @@
 
   &__logo {
     text-decoration: none;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
 
     &::after {
       content: none;
@@ -69,13 +77,13 @@
   &__links {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 7em;
     grid-gap: 4em;
     justify-content: flex-end;
     width: 100%;
 
     @media (max-width: 600px) {
       grid-gap: 2em;
+      justify-content: center;
     }
 
     .Header__link {
