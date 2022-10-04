@@ -3,31 +3,6 @@ import { getUrlArgs } from "components/utils"
 import globalThis from '@ungap/global-this';
 import "intersection-observer";
 
-
-// from https://wattenberger.com/blog/react-hooks
-export const useIsInView = (margin = "0px") => {
-    // State and setter for storing whether element is visible
-    const [isIntersecting, setIntersecting] = useState(false);
-    const ref = useRef()
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                // Update our state when observer callback fires
-                setIntersecting(entry.isIntersecting);
-            },
-            // { margin }
-        );
-        if (ref.current) observer.observe(ref.current);
-        return () => {
-            observer.unobserve(ref.current);
-        };
-    }, []);
-
-    return [ref, isIntersecting];
-}
-
-
 // from https://github.com/janosh/janosh.io/blob/master/src/hooks
 export const useEventListener = (eventNames, handler, element = globalThis) => {
     // Create a ref that stores the handler.
@@ -64,10 +39,4 @@ export const useOnClickOutside = (ref, handler, events) => {
         !ref.current.contains(event.target) &&
         handler(event)
     useEventListener(events, detectClickOutside)
-}
-
-// from https://wattenberger.com/
-export const useUrlParams = () => {
-    const params = getUrlArgs()
-    return params
 }
