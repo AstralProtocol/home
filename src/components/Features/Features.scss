@@ -8,6 +8,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
 
+    @media (max-width: 500px) {
+      padding-top: 0;
+      padding-bottom: 5rem;
+    }
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
       grid-gap: 3em;

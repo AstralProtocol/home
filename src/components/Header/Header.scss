@@ -93,6 +93,10 @@
         color: $primary-main;
         text-decoration: underline;
       }
+
+      @media (max-width:500px) {
+        font-size: 1rem;
+      }
   
       @media (max-width: 767px) {
         padding-bottom: 0.25em;

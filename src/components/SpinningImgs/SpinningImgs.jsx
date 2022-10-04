@@ -43,12 +43,7 @@ class SpinningImgs extends Component {
           ))}
         </div>
         <span className="SpinningImgs__message">
-          powered by{" "}
-          {currentImg ? (
-            <span className="SpinningImgs__name">{currentImg}</span>
-          ) : (
-            "Web3"
-          )}
+          powered by{" "}{currentImg || "Web3"}
         </span>
       </div>
     )

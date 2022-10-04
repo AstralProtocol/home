@@ -13,6 +13,10 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    @media (max-width: 500px) {
+      margin-bottom: 8rem !important;
+    }
   }
 
   &__info__container {

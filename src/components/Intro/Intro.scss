@@ -1,7 +1,8 @@
 @import "../../styles/lib.scss";
 
 .Intro {
-  height: calc(#{100vh});
+  // height: calc(#{100vh});
+  height: calc(#{100vh} - 90px);
   color: $white;
   display: flex;
   flex-direction: column;
@@ -9,16 +10,18 @@
 
   @media (max-width: 500px) {
     min-height: 27em;
-    padding-bottom: 2em;
+    padding-top: 20%;
+    margin-bottom: 3rem;
+    justify-content: start;
   }
 
   @media (max-width: 768px) {
-    min-height: calc(#{100vh} - 170px);
+    // min-height: calc(#{100vh} - 170px);
   }
 
   &__header {
     font-family: $font-secondary;
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 700;
     margin: 0;
     margin-bottom: 44px;
@@ -29,6 +32,10 @@
     animation: fadeUpSmall 800ms ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 250ms;
+
+    @media (max-width: 500px) {
+      font-size: 2.25rem;
+    }
   }
 
   &__buttons {

@@ -28,6 +28,12 @@
     margin-top: auto;
   }
 
+  &__pets {
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
   &__copyright {
     &__container {
       line-height: 180%;
