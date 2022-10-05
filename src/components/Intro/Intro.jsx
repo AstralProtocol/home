@@ -9,13 +9,6 @@ import "./Intro.scss"
 const Intro = () => {
   return (
     <MaxWidth size="m" className="Intro">
-      <Link className="Header__logo" to="/">
-        <img
-          className={classNames("Header__logo__container")}
-          src={require(`images/astral-logo.svg`).default}
-          alt="Logo"
-        />
-      </Link>
       <h1 className="Intro__header">
         At Astral we are building tools to enable the location-based
         decentralized web.
