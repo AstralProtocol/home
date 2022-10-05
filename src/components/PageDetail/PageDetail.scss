@@ -33,10 +33,6 @@
     &:hover {
       color: $blue-600;
     }
-
-    &:visited {
-      //color: $blue-600;
-    }
   }
 
   &__item {
@@ -65,8 +61,6 @@
 
       &__role {
         font-size: 0.85em;
-        //font-weight: 500;
-        //color: $grey-700;
         line-height: 1.4;
         margin-top: 0.5em;
       }
@@ -75,8 +69,7 @@
 
   @media (max-width: 1000px) {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 4rem;
 
     &__container {
       height: auto;
@@ -113,7 +106,10 @@
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: $media-mobile) {
+    justify-content: space-between;
+    gap: 0;
+    
     &__item {
       margin-right: 1em;
 

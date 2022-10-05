@@ -131,6 +131,8 @@
   }
 
   .gatsby-highlight {
+    max-width: calc(100vw - 4rem);
+    overflow-x: scroll;
     background-image: url("../../images/background-feature.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -247,6 +249,10 @@
 
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $media-mobile) {
+      padding-inline: 2rem;
     }
 
     &__container {
