@@ -72,6 +72,14 @@
 
   .Objectives {
     margin-top: 5em;
+
+    @media (max-width: 1000px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: $media-mobile) {
+      margin-top: 1rem;
+    }
   }
 
   a:hover {
@@ -122,8 +130,6 @@
 
   li {
     margin: 0 auto 1em;
-    padding-right: 20px;
-    //padding-left: 1.2em;
     font-size: 1em;
     line-height: 1.9em;
     font: normal 16px/1.9em "Inter", Arial, sans-serif;
