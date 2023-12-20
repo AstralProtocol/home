@@ -1,4 +1,4 @@
-# Astral Landing
+# ✨Astral Landing
 
 ## Install Gatsby Globally
 
