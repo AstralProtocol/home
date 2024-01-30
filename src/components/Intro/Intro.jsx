@@ -19,7 +19,10 @@ const Intro = () => {
           isButton
           className="Intro__buttons_button"
           buttonProps={{ category: "filled" }}
-          to="https://docs.astral.global"
+          // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
+          //
+          // to="https://docs.astral.global" 
+          to="https://astral-protocol.gitbook.io/astral/"
         >
           Read our Litepaper
         </Link>

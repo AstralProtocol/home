@@ -42,7 +42,9 @@ const Header = ({ knockoutHeader }) => (
 const links = [
   {
     name: "Litepaper",
-    // url: "https://docs.astral.global", <-- TBD to be updated back to the subdomain once the DNS issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326)
+    // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
+    //
+    // url: "https://docs.astral.global",  
     url: "https://astral-protocol.gitbook.io/astral/",
   }, {
     name: "Projects",
