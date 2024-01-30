@@ -42,17 +42,21 @@ const Header = ({ knockoutHeader }) => (
 const links = [
   {
     name: "Litepaper",
-    url: "https://docs.astral.global",
+    // url: "https://docs.astral.global", <-- TBD to be updated back to the subdomain once the DNS issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326)
+    url: "https://astral-protocol.gitbook.io/astral/",
   }, {
     name: "Projects",
     url: "/#work",
   }, {
     name: "Contact",
     url: "mailto:contact@astral.global",
-  }, {
-    name: "Donate",
-    url: "https://gitcoin.co/grants/1102/astral",
-  }
+  },
+  //** Donate button - to be active/set to a current grant/grants 
+  //
+  //  {
+  //   name: "Donate",
+  //   url: "https://gitcoin.co/grants/1102/astral",
+  // }
 ]
 
 Header.propTypes = {
