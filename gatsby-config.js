@@ -159,13 +159,13 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-remove-serviceworker`,
-    {
-        resolve: `gatsby-plugin-parsely-analytics`,
-        options: {
-          apikey: `astral.global`,
-          enableInDevelopment: false // send page views when NODE_ENV !== prod
-        }
-    },
+    // {
+    //     resolve: `gatsby-plugin-parsely-analytics`,
+    //     options: {
+    //       apikey: `astral.global`,
+    //       enableInDevelopment: false // send page views when NODE_ENV !== prod
+    //     }
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
