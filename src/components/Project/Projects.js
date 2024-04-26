@@ -6,7 +6,7 @@ const Projects = {
         title: "Hyperaware",
         projectType: "sdApp",
         description: <div>
-            A spatial governance protocol for connected devices: congestion zones running on smart contacts.
+            A spatial governance protocol for connected devices: congestion zones running on smart contracts.
         </div>,
         // demo: 'https://hyperaware.io/',
         github: "https://github.com/wearehyperaware",
