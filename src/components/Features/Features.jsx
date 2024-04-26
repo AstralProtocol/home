@@ -25,8 +25,8 @@ const features = [
     // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
     // link: "https://docs.astral.global/geodids/geodid-intro",
   }, {
-    title: "ZK location proofs.",
-    subtitle: "Build real world Web3 experiences with our privacy-preserving geospatial coordinate attestations, powered by zkMaps and EAS",
+    title: "Location attestations.",
+    subtitle: "Build real world x on-chain experiences with Astral location claims, powered by EAS. (Zero-knowledge coming soon!)",
     // description: "Building the oracle systems to trustlessly fetch spatial data and analytics into spatial contracts and location-based dApps.",
     // link: "https://docs.astral.global/astral-protocol/oracles",
   }
