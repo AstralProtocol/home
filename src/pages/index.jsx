@@ -13,6 +13,8 @@ const Home = () => (
     <Seo />
     <Intro />
     <Features />
+    <h3 id="features-footer">Now, smart contracts are connected to the <strong>real world</strong>.</h3>
+
     <MaxWidth id="work" className="Home__projects">
       {Object.entries(Projects).map(([key, value], index) => (
         <Project

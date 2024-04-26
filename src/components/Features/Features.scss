@@ -3,7 +3,7 @@
 .Features {
   &__container {
     padding-top: 10vh;
-    padding-bottom: 8em;
+    padding-bottom: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-gap: 2em;
@@ -76,6 +76,15 @@
     &__description {
       font-size: 16px;
       margin: 0;
+    }
+  }
+
+  &__footer {
+    h3 {
+      font-weight: 300;
+      font-size: 18px;
+
+
     }
   }
 }

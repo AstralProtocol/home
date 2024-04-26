@@ -12,6 +12,8 @@ const Features = () => {
           <p className="Features__item__description">{feature.description}</p>
         </a>
       ))}
+
+      <br />
     </MaxWidth>
   )
 }
