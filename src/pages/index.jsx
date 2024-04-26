@@ -17,6 +17,8 @@ const Home = () => (
     <Supporters />
 
     <MaxWidth id="work" className="Home__projects">
+      <h2>What could you build?</h2>
+      <h3>We've developed prototypes and designed dapps in ReFi, social, gaming, mobility, fitness and more.</h3>
       {Object.entries(Projects).map(([key, value], index) => (
         <Project
           {...value}
