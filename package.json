@@ -83,7 +83,7 @@
   "devDependencies": {
     "csv-loader": "^3.0.3",
     "gatsby-plugin-remove-trailing-slashes": "^4.4.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.8.8"
   },
   "keywords": [
     "gatsby",
