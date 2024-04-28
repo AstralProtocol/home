@@ -78,9 +78,9 @@ const Project = ({
               )}
             </div>
             <div className="Project__tech__section">
-              <Label className="Project__tech__title" category="primary">
+              {/* <Label className="Project__tech__title" category="primary">
                 tools
-              </Label>
+              </Label> */}
               {Object.keys(tech).map((key) => (
                 <Label className="Project__tech" key={key}>
                   {tech[key]}
@@ -90,7 +90,7 @@ const Project = ({
           </div>
           <div
             className={classNames("Project__image__container", {
-              "Project__image__container--has-link": demo || readMore,
+              "Project__image__container--has-link": github,
             })}
           >
             {images.map((image, i) => (
@@ -98,7 +98,7 @@ const Project = ({
                 key={i}
                 doOpenInNewTab
                 className="Project__image__link"
-                to={demo || readMore}
+                to={github}
               >
                 <img
                   className={classNames("Project__image", {

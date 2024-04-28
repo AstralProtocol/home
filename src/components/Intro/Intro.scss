@@ -8,6 +8,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+
+  .sub-heading {
+    font-family: 'Lato';
+    font-size: 24px;
+    margin-bottom: 34px;;
+  }
 
   @media (max-width: $media-mobile) {
     min-height: 27em;
@@ -20,9 +27,9 @@
     font-size: 3.75rem;
     font-weight: 700;
     margin: 0;
-    margin-bottom: 44px;
+    margin-bottom: 4px;
     animation: fade--up 1s ease-out;
-    max-width: 880px;
+    max-width: 100%;
     line-height: 1.2;
     opacity: 0;
     animation: fadeUpSmall 800ms ease-in-out;
@@ -41,7 +48,8 @@
 
   &__buttons {
     display: flex;
-    gap: 24px;
+    gap: 34px;
+    justify-content: center;
 
     &__button {
       opacity: 0;

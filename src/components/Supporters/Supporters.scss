@@ -9,12 +9,6 @@
     font-size: 3.25rem; // 52px
   }
 
-  h3 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-
   p {
     margin-top: 0.5em;
   }
@@ -34,11 +28,11 @@
     }
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     justify-items: center;
     align-items: center;
-    padding-top: 10vh;
+    padding-top: 5vh;
     padding-bottom: 6em;
 
     &__link {

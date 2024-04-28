@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,
   faTwitter,
+  faTelegram,
   faLinkedinIn,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons"
@@ -37,11 +38,8 @@ const icons = [
     icon: faGithub,
     url: "https://github.com/AstralProtocol"
   },   {
-    icon: faLinkedinIn,
-    url: "https://www.linkedin.com/company/astralprotocol/"
-  },   {
-    icon: faDiscord,
-    url: "https://discord.gg/BMKQyP7DrD"
+    icon: faTelegram,
+    url: "https://t.me/+UkTOSXnDcDM5ZTBk"
   },   {
     icon: faTwitter,
     url: "https://twitter.com/astralprotocol"

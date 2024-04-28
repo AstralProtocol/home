@@ -13,7 +13,12 @@ const Home = () => (
     <Seo />
     <Intro />
     <Features />
+    <h3 id="features-footer">Now, smart contracts are connected to the <strong>real world</strong>.</h3>
+    <Supporters />
+
     <MaxWidth id="work" className="Home__projects">
+      <h2>What could you build?</h2>
+      <h3>We've developed prototypes and designed dapps in ReFi, social, gaming, mobility, fitness and more.</h3>
       {Object.entries(Projects).map(([key, value], index) => (
         <Project
           {...value}
@@ -22,7 +27,6 @@ const Home = () => (
         />
       ))}
     </MaxWidth>
-    <Supporters />
   </Layout>
 )
 

@@ -3,9 +3,9 @@
 .Features {
   &__container {
     padding-top: 10vh;
-    padding-bottom: 8em;
+    padding-bottom: 2em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-gap: 2em;
 
     @media (max-width: $media-mobile) {
@@ -49,15 +49,15 @@
       z-index: -1;
     }
     
-    &:hover {
-      box-shadow: $box-shadow__feature;
-      border-radius: 8px;
+    // &:hover {
+    //   box-shadow: $box-shadow__feature;
+    //   border-radius: 8px;
 
-      &::before {
-        visibility: visible;
-        background-position: center;
-      }
-    }
+    //   &::before {
+    //     visibility: visible;
+    //     background-position: center;
+    //   }
+    // }
 
     &__title {
       font-family: $font-secondary;
@@ -68,7 +68,7 @@
 
     &__subtitle {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 300;
       color: $white;
       margin-bottom: 12px;
     }
@@ -76,6 +76,15 @@
     &__description {
       font-size: 16px;
       margin: 0;
+    }
+  }
+
+  &__footer {
+    h3 {
+      font-weight: 300;
+      font-size: 18px;
+
+
     }
   }
 }

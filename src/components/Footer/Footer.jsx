@@ -10,10 +10,10 @@ const Footer = () => {
     <div className="Footer__container">
       <MaxWidth size="l" className="Footer">
         <div className="Footer__pets">
-          <SpinningImgs />
+          {/* <SpinningImgs /> */}
         </div>
         <div className="Footer__copyright__container">
-          <span className="Footer__copyright">&copy; {year} Graticule Labs LLC</span>
+          <span className="Footer__copyright">&copy; {year} Astral</span>
         </div>
       </MaxWidth>
     </div>

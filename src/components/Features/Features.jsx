@@ -12,27 +12,31 @@ const Features = () => {
           <p className="Features__item__description">{feature.description}</p>
         </a>
       ))}
+
+      <br />
     </MaxWidth>
   )
 }
 
 const features = [
   {
-    title: "Data",
-    subtitle: "Spatial data, immutably stored",
-    description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
-    link: "https://docs.astral.global/geodids/geodid-intro",
+    title: "Your on-chain basemap.",
+    subtitle: "Register geographic assets: polygons, lines + points. Deploy your own sub-registry or build on the Astral Map.",
+    // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
+    // link: "https://docs.astral.global/geodids/geodid-intro",
   }, {
-    title: "Oracle",
-    subtitle: "Bridge the real-world with web3.",
-    description: "Building the oracle systems to trustlessly fetch spatial data and analytics into spatial contracts and location-based dApps.",
-    link: "https://docs.astral.global/astral-protocol/oracles",
-  }, {
-    title: "Smart Contracts",
-    subtitle: "Location-based dApps",
-    description: "We're developing libraries and tools to make using spatial data in smart contracts simple and intuitive.",
-    link: "https://docs.astral.global/astral-protocol/spatial-contracts",
+    title: "Location attestations.",
+    subtitle: "Build real world x on-chain experiences with Astral location claims, powered by EAS. (Zero-knowledge coming soon!)",
+    // description: "Building the oracle systems to trustlessly fetch spatial data and analytics into spatial contracts and location-based dApps.",
+    // link: "https://docs.astral.global/astral-protocol/oracles",
   }
+  // , 
+  // {
+  //   title: "Smart Contracts",
+  //   subtitle: "Location-based dApps",
+  //   description: "We're developing libraries and tools to make using spatial data in smart contracts simple and intuitive.",
+  //   link: "https://docs.astral.global/astral-protocol/spatial-contracts",
+  // }
 ]
 
 Features.propTypes = {}

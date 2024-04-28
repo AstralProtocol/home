@@ -40,25 +40,25 @@ const Header = ({ knockoutHeader }) => (
 )
 
 const links = [
-  {
-    name: "Litepaper",
-    // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
-    //
-    // url: "https://docs.astral.global",  
-    url: "https://astral-protocol.gitbook.io/astral/",
-  }, {
-    name: "Projects",
-    url: "/#work",
-  }, {
-    name: "Contact",
-    url: "mailto:contact@astral.global",
-  },
+  // {
+  //   name: "Litepaper",
+  //   // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
+  //   //
+  //   // url: "https://docs.astral.global",  
+  //   url: "https://astral-protocol.gitbook.io/astral/",
+  // }, {
+  //   name: "Projects",
+  //   url: "/#work",
+  // }, {
+  //   name: "Contact",
+  //   url: "mailto:contact@astral.global",
+  // },
   //** Donate button - to be active/set to a current grant/grants 
-  //
-  //  {
-  //   name: "Donate",
-  //   url: "https://gitcoin.co/grants/1102/astral",
-  // }
+  
+   {
+    name: "Donate on GG20! ↗",
+    url: "https://twitter.com/AstralProtocol/status/1782815807178715473",
+  }
 ]
 
 Header.propTypes = {
