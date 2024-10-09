@@ -1,4 +1,4 @@
-import React from "react"
+import {useState, useEffect, React} from "react"
 import classNames from "classnames"
 import PropTypes from "prop-types"
 import Headroom from "react-headroom"
@@ -6,7 +6,24 @@ import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
 import Link from "components/_ui/Link/Link"
 import "./Header.scss"
 
-const Header = ({ knockoutHeader }) => (
+const Header = ({ knockoutHeader }) =>{
+  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+      // Function to update state based on window width
+      const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+      };
+
+      // Set up event listener for window resize
+      window.addEventListener('resize', handleResize);
+
+      // Clean up the event listener when the component unmounts
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
   <Headroom className="Header__headroom">
     <MaxWidth
       size="l"
@@ -22,7 +39,7 @@ const Header = ({ knockoutHeader }) => (
             alt="Logo"
           />
         </Link>
-        <div className="Header__links">
+        {windowWidth <= 1000 ? null : (<div className="Header__links">
           
             <Link
               doOpenInNewTab
@@ -45,11 +62,11 @@ const Header = ({ knockoutHeader }) => (
             >
               Logbook App →
             </Link>
-        </div>
+        </div>)}
       </div>
     </MaxWidth>
   </Headroom>
-)
+)}
 
 Header.propTypes = {
   knockoutHeader: PropTypes.bool,
