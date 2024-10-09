@@ -13,7 +13,7 @@ const Home = () => (
     <Seo />
     <Intro />
     <Features />
-    <h3 id="features-footer">Now, smart contracts are connected to the <strong>real world</strong>.</h3>
+    {/* <h3 id="features-footer">Now, smart contracts are connected to the <strong>real world</strong>.</h3> */}
     <Supporters />
 
     <MaxWidth id="work" className="Home__projects">

@@ -7,7 +7,7 @@ const Supporters = () => {
   return (
     <MaxWidth className="Supporters">
       <h2>Web3 to our core.</h2>
-      <h3>Astral is an open source, open access, token-free public good — built with support from:</h3>
+      <h3>Astral builds open source, open access, token-free public goods — support from:</h3>
       <div className="Supporters__container">
         {supporters.map((supporter, index) => (
           <div key={index}>
@@ -36,6 +36,8 @@ const kernelImage = require(`../../images/kernel.png`).default;
 const easImage = require(`../../images/eas.png`).default;
 const ccImage = require(`../../images/climate-collective.gif`).default;
 const celoImage = require(`../../images/celo.png`).default;
+const easierImage = require(`../../images/easier.png`).default
+const arbitrumImage = require(`../../images/arbitrum.png`).default
 
 
 const supporters = [
@@ -68,6 +70,16 @@ const supporters = [
     name: "Celo",
     image: celoImage,
     url: "https://celo.org/",
+  },
+  {
+    name: "Arbitrum",
+    image: arbitrumImage,
+    url: "https://arbitrum.io"
+  },
+  {
+    name: "EASIER Data Initiative",
+    image: easierImage,
+    url: "https://easierdata.org"
   }
 ]
 
