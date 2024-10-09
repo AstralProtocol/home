@@ -1,7 +1,23 @@
 import React from "react";
 
 const Projects = {
-      
+    logbook: {
+        title: "Logbook",
+        projectType: "dApp",
+        description: <div>
+            A decentralized application to tell place-based stories, built on the Location Proof Protocol.
+        </div>,
+        // demo: 'https://hyperaware.io/',
+        github: "https://logbook.astral.global",
+        "tech": [
+            "eas",
+            "scaffold-eth",
+        ],
+        hasImageBorder: false,
+        "img_src": [
+            "project-logbook"
+        ],
+    },
     hyperaware: {
         title: "Hyperaware",
         projectType: "sdApp",
@@ -37,6 +53,41 @@ const Projects = {
             "project-zkmaps"
         ],
     },
+    web3Dashboard: {
+        title: "Web3 Geospatial Dashboard",
+        projectType: "dapp",
+        description: <div>
+           A dashboard to interact with raster satellite imagery stored on IPFS, accessed via STAC catalogs. Built by the EASIER Data Initiative
+        </div>,
+        // demo: "https://github.com/AstralProtocol/spatial-sol",
+        github: "https://easierdata.org/updates/2024/2024-01-24-dashboard-showcase",
+        "tech": [
+            "IPFS",
+            "STAC",
+            "Mapbox"
+        ],
+        hasImageBorder: false,
+        "img_src": [
+            "project-web3-geospatial-dashboard"
+        ],
+    },
+    spatialsol: {
+        title: "Spatial.sol",
+        projectType: "library",
+        description: <div>
+           A library of geometric and topological functions in Solidity.
+        </div>,
+        // demo: "https://github.com/AstralProtocol/spatial-sol",
+        github: "https://github.com/AstralProtocol/spatial-sol",
+        "tech": [
+            "Solidity",
+            "dev tools",
+        ],
+        hasImageBorder: false,
+        "img_src": [
+            "project-spatial"
+        ],
+    }, 
     Kolektivo: {
         title: "Kolektivo",
         projectType: "sdApp",
@@ -55,23 +106,7 @@ const Projects = {
             "project-kolektivo"
         ],
     }, 
-    spatialsol: {
-        title: "Spatial.sol",
-        projectType: "library",
-        description: <div>
-           A library of geometric and topological functions in Solidity.
-        </div>,
-        // demo: "https://github.com/AstralProtocol/spatial-sol",
-        github: "https://github.com/AstralProtocol/spatial-sol",
-        "tech": [
-            "Solidity",
-            "dev tools",
-        ],
-        hasImageBorder: false,
-        "img_src": [
-            "project-spatial"
-        ],
-    }, 
+    
     sprout: {
         title: "Sprout",
         projectType: "sdApp",
@@ -90,24 +125,23 @@ const Projects = {
             "project-sprout"
         ],
     },
-    geolocker: {
-        title: "Geolocker",
-        projectType: "Early work",
-        description: <div>
-            A prototype spatial registry built on Ethereum.
-        </div>,
-        // readMore: "./geolocker",
-        github: "https://github.com/johnx25bd/ethlondon",
-        "tech": [
-            "solidity",
-            "spatial registries",
-        ],
-        hasImageBorder: false,
-        "img_src": [
-            "project-geolocker"
-        ],
-    }
-
+    // geolocker: {
+    //     title: "Geolocker",
+    //     projectType: "Early work",
+    //     description: <div>
+    //         A prototype spatial registry built on Ethereum.
+    //     </div>,
+    //     // readMore: "./geolocker",
+    //     github: "https://github.com/johnx25bd/ethlondon",
+    //     "tech": [
+    //         "solidity",
+    //         "spatial registries",
+    //     ],
+    //     hasImageBorder: false,
+    //     "img_src": [
+    //         "project-geolocker"
+    //     ],
+    // }
 };
 
 export default Projects;
