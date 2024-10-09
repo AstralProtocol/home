@@ -26,27 +26,22 @@ yarn && yarn build
 
 ## Fleek Deploy
 
-Login to Fleek with GitHub
+Login to Vercel with GitHub
 
-- Docker image: `fleek/gatsby`
-
-- Build command: `yarn && yarn build`
-
-- Publish directory: `public`
 
 ## DNS
 
 - Cloudflare nameservers: `kristin.ns.cloudflare.com` and `nitin.ns.cloudflare.com`
 
 - DNS Settings for Cloudflare
-  
+<!--   
   - `CNAME astral.global 29be39ce0720784146fd.b-cdn.net`
 
   - `CNAME _dnslink _dnslink.broad-morning-5527.on.fleek.co`
 
   - `CNAME www 29be39ce0720784146fd.b-cdn.net`
 
-  - `CNAME _dnslink.www _dnslink.broad-morning-5527.on.fleek.co`
+  - `CNAME _dnslink.www _dnslink.broad-morning-5527.on.fleek.co` -->
 
 ## References
 

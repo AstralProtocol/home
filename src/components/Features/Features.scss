@@ -5,7 +5,7 @@
     padding-top: 10vh;
     padding-bottom: 2em;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: repeat(3, 1fr) ;
     grid-gap: 2em;
 
     @media (max-width: $media-mobile) {
@@ -28,6 +28,7 @@
     padding: 24px;
     border-radius: 8px;
     transition: box-shadow .2s ease-out;
+    width: 100%;
 
     // Background image is applied to a before element and set to hidden by default. 
     // Then, it's set to visible on hover. This way, the image is loaded on component render 
@@ -87,4 +88,27 @@
 
     }
   }
+  &__buttons {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+
+    &__button {
+      opacity: 0;
+      animation: fadeUpSmall 800ms ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 250ms;
+      width: fit-content;
+
+      &:hover {
+        transform: translateY(10px);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
 }

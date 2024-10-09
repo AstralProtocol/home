@@ -23,43 +23,33 @@ const Header = ({ knockoutHeader }) => (
           />
         </Link>
         <div className="Header__links">
-          {links.map((link, index) => (
+          
             <Link
               doOpenInNewTab
-              className="Header__link"
-              to={link.url}
-              key={index}
+              isButton
+              className="Intro__buttons_button"
+              buttonProps={{ category: "outlined" }}
+              to="https://dorahacks.io/hackathon/ftc-2024/tracks#environmental-impact-by-klimadao"
             >
-              {link.name}
+              Enter the FtC x EC Hackathon ↗
             </Link>
-          ))}
+            <Link
+              doOpenInNewTab
+              isButton
+              className="Intro__buttons_button"
+              buttonProps={{ category: "filled" }}
+              // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
+              //
+              // to="https://docs.astral.global" 
+              to="https://logbook.astral.global"
+            >
+              Logbook App →
+            </Link>
         </div>
       </div>
     </MaxWidth>
   </Headroom>
 )
-
-const links = [
-  // {
-  //   name: "Litepaper",
-  //   // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
-  //   //
-  //   // url: "https://docs.astral.global",  
-  //   url: "https://astral-protocol.gitbook.io/astral/",
-  // }, {
-  //   name: "Projects",
-  //   url: "/#work",
-  // }, {
-  //   name: "Contact",
-  //   url: "mailto:contact@astral.global",
-  // },
-  //** Donate button - to be active/set to a current grant/grants 
-  
-   {
-    name: "Donate on GG20! ↗",
-    url: "https://twitter.com/AstralProtocol/status/1782815807178715473",
-  }
-]
 
 Header.propTypes = {
   knockoutHeader: PropTypes.bool,

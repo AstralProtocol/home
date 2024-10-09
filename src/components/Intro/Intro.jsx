@@ -10,7 +10,7 @@ const Intro = () => {
   return (
     <MaxWidth size="m" className="Intro">
       <h1 className="Intro__header">
-        Build<br /> <strong>location-based</strong> <br />dapps.
+        Build<br /> <strong><em>location-based</em></strong> <br />dapps.
       </h1>
       <p class="sub-heading">Astral develops open source tools + infrastructure <br />so you can easily build location-based dapps. </p>
       <div className="Intro__buttons">
@@ -22,9 +22,9 @@ const Intro = () => {
           // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
           //
           // to="https://docs.astral.global" 
-          to="https://twitter.com/AstralProtocol"
+          to="https://docs.astral.global"
         >
-          Follow for updates
+          Read the docs
         </Link>
         <Link
           doOpenInNewTab
@@ -33,7 +33,7 @@ const Intro = () => {
           buttonProps={{ category: "outlined" }}
           to="https://t.me/+UkTOSXnDcDM5ZTBk"
         >
-          Join our Telegram!
+          Join our Telegram
         </Link>
       </div>
     </MaxWidth>
