@@ -3,7 +3,7 @@
 .Intro {
   $header-height: 90px;
 
-  height: calc(100vh - #{$header-height});
+  height: auto;
   color: $white;
   display: flex;
   flex-direction: column;
