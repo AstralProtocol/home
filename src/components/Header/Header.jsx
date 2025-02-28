@@ -23,16 +23,6 @@ const Header = ({ knockoutHeader }) => (
           />
         </Link>
         <div className="Header__links">
-          
-            <Link
-              doOpenInNewTab
-              isButton
-              className="Intro__buttons_button"
-              buttonProps={{ category: "outlined" }}
-              to="https://dorahacks.io/hackathon/ftc-2024/tracks#environmental-impact-by-klimadao"
-            >
-              Enter the FtC x EC Hackathon ↗
-            </Link>
             <Link
               doOpenInNewTab
               isButton
