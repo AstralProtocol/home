@@ -27,6 +27,15 @@ const Header = ({ knockoutHeader }) => (
               doOpenInNewTab
               isButton
               className="Intro__buttons_button"
+              buttonProps={{ category: "outlined" }}
+              to="https://osf.io/bg2uq_v1"
+            >
+              Vision Paper →
+            </Link>
+            <Link
+              doOpenInNewTab
+              isButton
+              className="Intro__buttons_button"
               buttonProps={{ category: "filled" }}
               // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
               //
