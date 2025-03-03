@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Footer from "components/Footer/Footer"
 import SocialCol from "components/SocialCol/SocialCol"
 import Header from "components/Header/Header"
+import Banner from "components/Banner/Banner"
 import { ModalProvider } from "components/_ui/Modal/Modal"
 import "styles/globals.scss"
 // The following import prevents a Font Awesome icon server-side rendering bug,
@@ -41,6 +42,7 @@ const Layout = ({
       <ModalProvider>
         <div className="div">
           <div className="Layout">
+            <Banner />
             {showNavigation && <Header knockoutHeader={knockoutHeader} />}
             {showSocialCol && <SocialCol />}
             <main className={classNames("Layout__content", className)}>
