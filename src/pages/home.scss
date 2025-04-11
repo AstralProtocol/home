@@ -1,0 +1,91 @@
+@import "../styles/_lib.scss";
+
+.Home {
+  &__cta-container {
+    background: linear-gradient(180deg, rgba(11, 11, 44, 0.9) 0%, rgba(29, 26, 83, 0.8) 100%);
+    padding: 10rem 0;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(83, 147, 254, 0.2);
+    border-bottom: 1px solid rgba(83, 147, 254, 0.2);
+    position: relative;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, rgba(83, 147, 254, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  }
+  
+  &__cta {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    
+    &-heading {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 3.5rem;
+      color: $white;
+      text-shadow: 0 0 15px rgba(83, 147, 254, 0.5);
+    }
+    
+    &-button {
+      display: inline-block;
+      font-size: 2.5rem;
+      padding: 1.8rem 5rem;
+      font-weight: 600;
+      text-decoration: none;
+      background-color: $primary-main;
+      color: $astral-black;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba($primary-main, 0.6);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+        transform: translateX(-100%);
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba($primary-main, 0.8);
+        
+        &:before {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $media-tablet) {
+    &__cta-container {
+      padding: 6rem 0;
+    }
+    
+    &__cta {
+      &-heading {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+      
+      &-button {
+        font-size: 1.8rem;
+        padding: 1.5rem 3.5rem;
+      }
+    }
+  }
+} 

@@ -31,22 +31,22 @@ const Features = () => {
 
 const features = [
   {
-    title: "Location Proof Protocol",
-    subtitle: "<strong>Build real world x on-chain experiences with Astral location proofs, powered by EAS.</strong> <br /><br />Deployed on Celo, Base, Arbitrum + Sepolia.",
+    title: "Location Protocol",
+    subtitle: "A common standard for structured, signed spatial data. <br /><br />Built on EAS, deployed on Celo, Base, Arbitrum + Sepolia.",
     // description: "Building the oracle systems to trustlessly fetch spatial data and analytics into spatial contracts and location-based dApps.",
-    link: "https://docs.astral.global/docs/location-proof-protocol/introduction",
+    link: "https://docs.astral.global/location-protocol/introduction",
   }, 
   {
-    title: "Verifiable<br />Geocomputation",
-    subtitle: "<strong>Register geographic assets onchain: polygons, lines + points. Deploy your own sub-registry or build on the Astral Map.</strong> <br /><br />In R+D)",
+    title: "Spatial.sol<br />(R+D)",
+    subtitle: "Geospatial logic in smart contracts.<br /><br />",
     // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
     link: "https://docs.astral.global/docs/tools/introduction#onchain-gis",
   },
   {
-    title: "Geospatial Data Storage",
-    subtitle: "<strong>Store geospatial data on IPFS and write spatial queries.</strong> <br /><br />Research by the EASIER Data Initiative.",
+    title: "Astral API<br />+ SDK",
+    subtitle: "Dev tools + infrastructure to build location-based dapps. <br /><br />In alpha.",
     // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
-    link: "https://docs.astral.global/docs/decentralized-spatial-data/introduction",
+    link: "https://docs.astral.global/api/getting-started",
   },
   // , 
   // {

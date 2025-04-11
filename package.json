@@ -30,6 +30,7 @@
     "d3-svg-legend": "2.25.6",
     "d3-transition": "3.0.1",
     "gatsby": "^4.4.0",
+    "gatsby-cli": "^5.14.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-canonical-urls": "^4.4.0",
     "gatsby-plugin-catch-links": "^4.4.0",
@@ -96,6 +97,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
+    "develop:light": "GATSBY_CPU_COUNT=1 gatsby develop -H 0.0.0.0",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

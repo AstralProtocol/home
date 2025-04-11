@@ -133,7 +133,24 @@ exports.onCreateWebpackConfig = ({
     loaders,
     plugins,
     actions,
+    getConfig
 }) => {
+    const config = getConfig();
+
+    // Patch MiniCssExtractPlugin to ignore CSS import order issues
+    if (stage === "develop" || stage === "build-javascript") {
+        const miniCssExtractPlugin = config.plugins.find(
+            (plugin) => plugin.constructor.name === "MiniCssExtractPlugin"
+        );
+
+        if (miniCssExtractPlugin) {
+            miniCssExtractPlugin.options.ignoreOrder = true;
+        }
+
+        actions.replaceWebpackConfig(config);
+    }
+
+    // Merge your existing rules and plugin
     actions.setWebpackConfig({
         module: {
             rules: [
@@ -153,5 +170,5 @@ exports.onCreateWebpackConfig = ({
                 __DEVELOPMENT__: stage === `develop` || stage === `develop-html`,
             }),
         ],
-    })
-}
+    });
+};

@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8001:8001"
+      - "9929:9929"  # for gatsby debugging
+      - "9230:9230"  # for node debugging
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.cache
+      - /app/public
+    environment:
+      - NODE_ENV=development
+      - GATSBY_WEBPACK_PUBLICPATH=/
+    command: npm run develop -- -p 8001 

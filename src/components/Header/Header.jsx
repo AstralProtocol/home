@@ -22,7 +22,7 @@ const Header = ({ knockoutHeader }) => (
             alt="Logo"
           />
         </Link>
-        <div className="Header__links">
+        {/* <div className="Header__links">
             <Link
               doOpenInNewTab
               isButton
@@ -44,7 +44,7 @@ const Header = ({ knockoutHeader }) => (
             >
               Logbook App →
             </Link>
-        </div>
+        </div> */}
       </div>
     </MaxWidth>
   </Headroom>

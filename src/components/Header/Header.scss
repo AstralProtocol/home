@@ -5,6 +5,8 @@
 
   &__headroom {
     z-index: 300;
+    position: relative;
+    margin-top: 0;
 
     .headroom:not(.headroom--scrolled) {
       .Header__container--knockoutColors {
