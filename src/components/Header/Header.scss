@@ -86,6 +86,24 @@
   }
 
   &__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: $media-tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__docs-button {
+    font-size: 14px;
+    
+    @media (max-width: $media-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &__legacy-links {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 4em;

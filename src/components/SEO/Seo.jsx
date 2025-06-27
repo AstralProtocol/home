@@ -107,7 +107,22 @@ function SEO({ description, lang, meta, title, image, twitterImage, canonical, p
                     content: metaKeywords,
                 },
             ].concat(meta)}
-        />
+        >
+            <script async src="https://tally.so/widgets/embed.js"></script>
+            <style>{`
+                .tally-popup .tally-popup-inner {
+                    max-width: 600px !important;
+                    width: 90vw !important;
+                }
+                
+                @media (max-width: 768px) {
+                    .tally-popup .tally-popup-inner {
+                        width: 95vw !important;
+                        max-width: 500px !important;
+                    }
+                }
+            `}</style>
+        </Helmet>
     )
 }
 

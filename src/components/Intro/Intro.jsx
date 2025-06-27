@@ -12,7 +12,7 @@ const Intro = () => {
       <h1 className="Intro__header">
         Introducing<br />the Astral Protocol
       </h1>
-      <p class="sub-heading">A spatial extension for the decentralized web.</p>
+      <p className="sub-heading">Location-based services for the decentralized web.</p>
       <div className="Intro__buttons">
         <Link
           doOpenInNewTab
@@ -26,15 +26,15 @@ const Intro = () => {
         >
           Introducing Astral
         </Link>
-        <Link
-          doOpenInNewTab
-          isButton
-          className="Intro__buttons_button"
-          buttonProps={{ category: "outlined" }}
-          to="https://docs.astral.global"
+        <button
+          data-tally-open="mZANZ0"
+          data-tally-emoji-text="✨"
+          data-tally-emoji-animation="flash"
+          data-tally-auto-close="1000"
+          className="Intro__buttons_button Intro__buttons_button--outlined"
         >
-          Read the docs
-        </Link>
+          Join Waitlist
+        </button>
       </div>
     </MaxWidth>
   )
