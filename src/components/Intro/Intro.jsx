@@ -12,7 +12,7 @@ const Intro = () => {
       <h1 className="Intro__header">
         Introducing<br />the Astral Protocol
       </h1>
-      <p class="sub-heading">Location-based services for the decentralized web.</p>
+      <p className="sub-heading">Location-based services for the decentralized web.</p>
       <div className="Intro__buttons">
         <Link
           doOpenInNewTab
