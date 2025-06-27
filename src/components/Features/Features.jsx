@@ -16,7 +16,7 @@ const Features = () => {
             {/* Add &nbsp;s and the link */}
             &nbsp;&nbsp;&nbsp;
             <span><a href={feature.link} rel="noopener noreferrer">
-              <strong>Docs↗</strong>
+              <strong>{feature.linkText || 'Docs'}↗</strong>
             </a></span>
           </h3>            
           {/* <p className="Features__item__description">{feature.description}
@@ -37,10 +37,11 @@ const features = [
     link: "https://docs.astral.global/location-protocol/introduction",
   }, 
   {
-    title: "Astral AVS<br />(R+D)",
+    title: "Astral AVS",
     subtitle: "Location proof verification and geospatial processing.<br /><br />",
     // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
     link: "https://x.com/AstralProtocol/status/1937881217728221684",
+    linkText: "Demo",
   },
   {
     title: "Astral API<br />+ SDK",
