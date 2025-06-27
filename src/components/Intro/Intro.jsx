@@ -26,21 +26,12 @@ const Intro = () => {
         >
           Introducing Astral
         </Link>
-        <Link
-          doOpenInNewTab
-          isButton
-          className="Intro__buttons_button"
-          buttonProps={{ category: "outlined" }}
-          to="https://docs.astral.global"
-        >
-          Read the docs
-        </Link>
         <button
           data-tally-open="mZANZ0"
           data-tally-emoji-text="✨"
           data-tally-emoji-animation="flash"
           data-tally-auto-close="1000"
-          className="Intro__buttons_button Intro__buttons_button--waitlist"
+          className="Intro__buttons_button Intro__buttons_button--outlined"
         >
           Join Waitlist
         </button>

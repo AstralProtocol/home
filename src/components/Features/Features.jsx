@@ -37,10 +37,10 @@ const features = [
     link: "https://docs.astral.global/location-protocol/introduction",
   }, 
   {
-    title: "Spatial.sol<br />(R+D)",
-    subtitle: "Geospatial logic in smart contracts.<br /><br />",
+    title: "Astral AVS<br />(R+D)",
+    subtitle: "Location proof verification and geospatial processing.<br /><br />",
     // description: "We have developed GeoDIDs, the primitive for representing raster and vector spatial data on IPFS. Read the documentation.",
-    link: "https://docs.astral.global/docs/tools/introduction#onchain-gis",
+    link: "https://x.com/AstralProtocol/status/1937881217728221684",
   },
   {
     title: "Astral API<br />+ SDK",

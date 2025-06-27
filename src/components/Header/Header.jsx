@@ -22,29 +22,15 @@ const Header = ({ knockoutHeader }) => (
             alt="Logo"
           />
         </Link>
-        {/* <div className="Header__links">
+        <div className="Header__links">
             <Link
               doOpenInNewTab
-              isButton
-              className="Intro__buttons_button"
-              buttonProps={{ category: "outlined" }}
-              to="https://osf.io/bg2uq_v1"
+              className="Header__docs-link"
+              to="https://docs.astral.global"
             >
-              Vision Paper →
+              Docs
             </Link>
-            <Link
-              doOpenInNewTab
-              isButton
-              className="Intro__buttons_button"
-              buttonProps={{ category: "filled" }}
-              // TODO: restore back to subdomain once issue is closed (https://github.com/AstralProtocol/astralprotocol/issues/20#issue-2026525326).
-              //
-              // to="https://docs.astral.global" 
-              to="https://logbook.astral.global"
-            >
-              Logbook App →
-            </Link>
-        </div> */}
+        </div>
       </div>
     </MaxWidth>
   </Headroom>

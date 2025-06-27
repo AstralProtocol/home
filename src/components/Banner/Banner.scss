@@ -37,20 +37,22 @@
   }
 
   &__button {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid #333;
+    background: $primary-main;
+    border: 2px solid transparent;
     border-radius: 8px;
-    color: #333;
-    font-weight: 800;
-    padding: 0.4rem 1.2rem;
+    color: $black;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease-out;
     margin-left: 0.5rem;
+    box-shadow: 0 2px 8px rgba($primary-main, 0.3);
     
     &:hover {
-      background: rgba(255, 255, 255, 0.6);
-      transform: translateY(-1px);
+      background: $primary-light;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-main, 0.5);
     }
   }
 

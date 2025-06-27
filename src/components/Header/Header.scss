@@ -86,6 +86,35 @@
   }
 
   &__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: $media-tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__docs-link {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: all 150ms ease-out;
+    
+    &:hover {
+      color: $primary-main;
+      background: rgba($primary-main, 0.1);
+    }
+
+    @media (max-width: $media-mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &__legacy-links {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 4em;
