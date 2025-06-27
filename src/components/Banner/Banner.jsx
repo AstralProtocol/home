@@ -7,15 +7,15 @@ const Banner = () => {
     <div className="Banner">
       <div className="Banner__content">
         <p className="Banner__announcement">
-          Join the Astral waitlist — <button 
+          Join the Astral waitlist — <span 
             data-tally-open="mZANZ0" 
             data-tally-emoji-text="✨" 
             data-tally-emoji-animation="flash" 
             data-tally-auto-close="1000"
-            className="Banner__button"
+            className="Banner__link"
           >
-            Sign up now
-          </button>
+            sign up now
+          </span>
         </p>
       </div>
     </div>

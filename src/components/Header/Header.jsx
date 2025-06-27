@@ -25,7 +25,9 @@ const Header = ({ knockoutHeader }) => (
         <div className="Header__links">
             <Link
               doOpenInNewTab
-              className="Header__docs-link"
+              isButton
+              className="Header__docs-button"
+              buttonProps={{ category: "outlined" }}
               to="https://docs.astral.global"
             >
               Docs
