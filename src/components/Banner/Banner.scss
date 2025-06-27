@@ -36,6 +36,24 @@
     }
   }
 
+  &__button {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    font-weight: 800;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 0.5rem;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.6);
+      transform: translateY(-1px);
+    }
+  }
+
   @media (max-width: $media-tablet) {
     padding: 0.7rem 0;
     

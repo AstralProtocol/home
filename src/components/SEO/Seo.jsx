@@ -107,7 +107,9 @@ function SEO({ description, lang, meta, title, image, twitterImage, canonical, p
                     content: metaKeywords,
                 },
             ].concat(meta)}
-        />
+        >
+            <script async src="https://tally.so/widgets/embed.js"></script>
+        </Helmet>
     )
 }
 

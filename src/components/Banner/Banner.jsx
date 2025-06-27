@@ -7,7 +7,15 @@ const Banner = () => {
     <div className="Banner">
       <div className="Banner__content">
         <p className="Banner__announcement">
-          We're live on <Link to="https://octant.app/project/7/0x6c9770edc75b4D1e1F49d7ce7a65541CA67602bD" doOpenInNewTab className="Banner__link">Octant Epoch 7</Link> and <Link to="https://explorer.gitcoin.co/#/round/42161/863" doOpenInNewTab className="Banner__link">Gitcoin GG23</Link> — we'd love your support!
+          Join the Astral waitlist — <button 
+            data-tally-open="mZANZ0" 
+            data-tally-emoji-text="✨" 
+            data-tally-emoji-animation="flash" 
+            data-tally-auto-close="1000"
+            className="Banner__button"
+          >
+            Sign up now
+          </button>
         </p>
       </div>
     </div>
