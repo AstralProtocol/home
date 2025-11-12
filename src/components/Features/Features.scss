@@ -19,6 +19,15 @@
     }
   }
 
+  &__heading {
+    grid-column: 1 / -1;
+    font-family: $font-secondary;
+    font-size: 48px;
+    color: $white;
+    margin: 0 0 2em;
+    text-align: center;
+  }
+
   &__item {
     position: relative;
     text-decoration: none;
