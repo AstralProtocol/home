@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Globe Preview - Astral Protocol</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050829;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .globe-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 3.75rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .sub-heading {
+      font-size: 1.5rem;
+      color: #e5e5e5;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      pointer-events: auto;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 150ms ease-out;
+      text-decoration: none;
+    }
+
+    .btn-filled {
+      background: #ffc793;
+      color: #000;
+      border: none;
+    }
+
+    .btn-outlined {
+      background: #0f0e29;
+      color: #fff;
+      border: 4px solid #ffc793;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(255, 199, 147, 0.5);
+    }
+
+    .instructions {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="globe-container" id="globeContainer">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="content">
+      <h1>The Astral Protocol</h1>
+      <p class="sub-heading">The trust layer for location data.</p>
+      <div class="buttons">
+        <a href="#" class="btn btn-filled">Start Building</a>
+        <button class="btn btn-outlined">Book Consultation</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="instructions">Move your mouse over the globe to see the repulsion effect</p>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const container = document.getElementById('globeContainer');
+    const ctx = canvas.getContext('2d');
+
+    // Configuration
+    const config = {
+      radius: 12,
+      numPoints: 800,
+      rotationSpeed: 0.003,
+      repulsionRadius: 120,
+      repulsionStrength: 8,
+      springStrength: 0.08,
+      damping: 0.85,
+      chars: ".:-=+*#%@",
+      fontSize: 14,
+      color: "rgba(255, 199, 147, ",
+    };
+
+    let mouse = { x: -1000, y: -1000 };
+    let rotation = 0;
+    let particles = [];
+
+    // Generate points on a sphere using Fibonacci spiral
+    function generateSpherePoints(numPoints, radius) {
+      const points = [];
+      const goldenRatio = (1 + Math.sqrt(5)) / 2;
+
+      for (let i = 0; i < numPoints; i++) {
+        const theta = 2 * Math.PI * i / goldenRatio;
+        const phi = Math.acos(1 - 2 * (i + 0.5) / numPoints);
+
+        points.push({
+          theta,
+          phi,
+          radius,
+          x: 0,
+          y: 0,
+          targetX: 0,
+          targetY: 0,
+          vx: 0,
+          vy: 0,
+          z: 0,
+          char: ".",
+        });
+      }
+
+      return points;
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = container.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = `${rect.width}px`;
+      canvas.style.height = `${rect.height}px`;
+      ctx.scale(dpr, dpr);
+    }
+
+    function animate() {
+      const rect = container.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const scale = Math.min(rect.width, rect.height) * 0.35;
+
+      // Clear canvas
+      ctx.clearRect(0, 0, rect.width, rect.height);
+
+      // Update rotation
+      rotation += config.rotationSpeed;
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        // Calculate 3D position with rotation
+        const x3d = p.radius * Math.sin(p.phi) * Math.cos(p.theta + rotation);
+        const y3d = p.radius * Math.cos(p.phi);
+        const z3d = p.radius * Math.sin(p.phi) * Math.sin(p.theta + rotation);
+
+        // Project to 2D
+        p.targetX = centerX + x3d * scale / p.radius;
+        p.targetY = centerY + y3d * scale / p.radius;
+        p.z = z3d;
+
+        // Initialize position if first frame
+        if (p.x === 0 && p.y === 0) {
+          p.x = p.targetX;
+          p.y = p.targetY;
+        }
+
+        // Calculate distance from mouse
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // Apply repulsion force if within radius
+        if (dist < config.repulsionRadius && dist > 0) {
+          const force = (config.repulsionRadius - dist) / config.repulsionRadius;
+          const forceX = (dx / dist) * force * config.repulsionStrength;
+          const forceY = (dy / dist) * force * config.repulsionStrength;
+          p.vx += forceX;
+          p.vy += forceY;
+        }
+
+        // Apply spring force back to target
+        const springDx = p.targetX - p.x;
+        const springDy = p.targetY - p.y;
+        p.vx += springDx * config.springStrength;
+        p.vy += springDy * config.springStrength;
+
+        // Apply damping
+        p.vx *= config.damping;
+        p.vy *= config.damping;
+
+        // Update position
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Determine character based on depth
+        const normalizedZ = (z3d + p.radius) / (2 * p.radius);
+        const charIndex = Math.floor(normalizedZ * (config.chars.length - 1));
+        p.char = config.chars[charIndex];
+      }
+
+      // Sort by z-depth for proper rendering
+      const sortedParticles = [...particles].sort((a, b) => a.z - b.z);
+
+      // Draw particles
+      ctx.font = `${config.fontSize}px "JetBrains Mono", "Fira Code", "Courier New", monospace`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      for (const p of sortedParticles) {
+        // Only render front-facing points
+        if (p.z < -p.radius * 0.2) continue;
+
+        // Calculate alpha based on depth
+        const normalizedZ = (p.z + p.radius) / (2 * p.radius);
+        const alpha = 0.2 + normalizedZ * 0.8;
+
+        // Add extra glow for repelled particles
+        const distFromTarget = Math.sqrt(
+          Math.pow(p.x - p.targetX, 2) + Math.pow(p.y - p.targetY, 2)
+        );
+        const repelGlow = Math.min(1, distFromTarget / 50);
+
+        if (repelGlow > 0.1) {
+          ctx.fillStyle = `rgba(207, 156, 255, ${repelGlow * 0.6})`;
+          ctx.fillText(p.char, p.x, p.y);
+        }
+
+        ctx.fillStyle = `${config.color}${alpha.toFixed(2)})`;
+        ctx.fillText(p.char, p.x, p.y);
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    // Event listeners
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      mouse = { x: -1000, y: -1000 };
+    });
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+    });
+
+    // Initialize
+    particles = generateSpherePoints(config.numPoints, config.radius);
+    resizeCanvas();
+    animate();
+  </script>
+</body>
+</html>
