@@ -102,7 +102,7 @@
     .nav-cta {
       font-family: var(--sans); font-size: 13px; font-weight: 700;
       letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 8px 16px; border: 1px solid var(--hairline); border-radius: 200px;
+      padding: 8px 16px; border: 1px solid rgba(255,255,255,0.32); border-radius: 200px;
       color: var(--fg); transition: all 200ms var(--ease);
     }
     .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
@@ -249,21 +249,21 @@
       gap: 6px; padding: 14px 16px;
       border-top: 1px solid var(--hairline-2);
       background: rgba(255,255,255,0.02);
-      font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+      font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em;
       color: var(--fg-muted);
     }
     .readout-label {
-      font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
       color: var(--fg-quiet);
     }
-    .readout-lines { display: flex; flex-direction: column; gap: 3px; }
+    .readout-lines { display: flex; flex-direction: column; gap: 4px; }
     .readout-lines .true { color: var(--accent); font-weight: 500; }
-    .readout-lines .hash { color: var(--fg-quiet); font-size: 10px; letter-spacing: 0.04em; }
+    .readout-lines .hash { color: var(--fg-quiet); font-size: 11.5px; letter-spacing: 0.04em; }
     @media (max-width: 960px) { .diagram { margin: 0 auto; max-width: 440px; } }
     @media (max-width: 520px) {
-      .diagram-readout { font-size: 10px; padding: 12px 14px; }
-      .readout-label { font-size: 9px; }
-      .readout-lines .hash { font-size: 9px; }
+      .diagram-readout { font-size: 11.5px; padding: 12px 14px; }
+      .readout-label { font-size: 10px; }
+      .readout-lines .hash { font-size: 10.5px; }
     }
 
     /* ----------------------------------------------------------
@@ -505,7 +505,7 @@
         </p>
 
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="https://docs.astral.global">
+          <a class="btn btn-primary" href="https://docs.astral.global" target="_blank" rel="noreferrer">
             Read the docs
             <svg viewBox="0 0 24 24"><path d="M7 17 L17 7 M9 7 h8 v8"/></svg>
           </a>
@@ -532,51 +532,51 @@
             <rect width="520" height="520" fill="url(#grid)" />
 
             <!-- corner texture: project tag (left) and lat/long pair (right) -->
-            <g font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(255,255,255,0.52)" letter-spacing="0.08em">
-              <text x="20"  y="28">POLICY ZONE · ID 0xA13C</text>
-              <text x="386" y="28">40.7128° N</text>
-              <text x="386" y="42">74.0060° W</text>
+            <g font-family="JetBrains Mono, monospace" font-size="11" font-weight="500" fill="rgba(255,255,255,0.58)" letter-spacing="0.05em">
+              <text x="20"  y="30">POLICY ZONE · ID 0xA13C</text>
+              <text x="380" y="30">40.7128° N</text>
+              <text x="380" y="45">74.0060° W</text>
             </g>
 
-            <!-- policy polygon -->
+            <!-- policy polygon — centred in the frame -->
             <polygon
-              points="120,160 280,110 400,180 380,330 250,400 140,360 90,250"
+              points="154,174 290,132 392,191 375,319 265,378 171,344 128,251"
               fill="rgba(255,199,147,0.10)"
               stroke="rgba(255,199,147,0.78)"
               stroke-width="1.4"
               stroke-linejoin="round"
             />
             <g fill="rgba(255,199,147,0.9)">
-              <circle cx="120" cy="160" r="2.5"/>
-              <circle cx="280" cy="110" r="2.5"/>
-              <circle cx="400" cy="180" r="2.5"/>
-              <circle cx="380" cy="330" r="2.5"/>
-              <circle cx="250" cy="400" r="2.5"/>
-              <circle cx="140" cy="360" r="2.5"/>
-              <circle cx="90"  cy="250" r="2.5"/>
+              <circle cx="154" cy="174" r="2.5"/>
+              <circle cx="290" cy="132" r="2.5"/>
+              <circle cx="392" cy="191" r="2.5"/>
+              <circle cx="375" cy="319" r="2.5"/>
+              <circle cx="265" cy="378" r="2.5"/>
+              <circle cx="171" cy="344" r="2.5"/>
+              <circle cx="128" cy="251" r="2.5"/>
             </g>
 
-            <!-- verified point: crosshair + two uncertainty rings, sitting off-centre inside the polygon -->
-            <g transform="translate(210,300)">
-              <circle r="42" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
-              <circle r="22" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <line x1="-30" y1="0" x2="-14" y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
-              <line x1="14"  y1="0" x2="30"  y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
-              <line x1="0" y1="-30" x2="0"  y2="-14" stroke="#F2F1EE" stroke-width="1.2"/>
-              <line x1="0" y1="14"  x2="0"  y2="30"  stroke="#F2F1EE" stroke-width="1.2"/>
+            <!-- verified point: crosshair + two uncertainty rings, inside the polygon -->
+            <g transform="translate(215,285)">
+              <circle r="38" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
+              <circle r="20" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <line x1="-28" y1="0" x2="-13" y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="13"  y1="0" x2="28"  y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="0" y1="-28" x2="0"  y2="-13" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="0" y1="13"  x2="0"  y2="28"  stroke="#F2F1EE" stroke-width="1.2"/>
               <circle r="3" fill="#F2F1EE"/>
             </g>
 
             <!-- annotation: policy region — horizontal leader off the left lip of the label -->
-            <g font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.08em" fill="rgba(255,199,147,0.92)">
-              <line x1="402" y1="180" x2="414" y2="180" stroke="rgba(255,199,147,0.6)" stroke-width="1"/>
-              <text x="420" y="184">POLICY REGION</text>
+            <g font-family="JetBrains Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.03em" fill="rgba(255,199,147,0.95)">
+              <line x1="392" y1="191" x2="400" y2="191" stroke="rgba(255,199,147,0.7)" stroke-width="1.2"/>
+              <text x="404" y="195">POLICY REGION</text>
             </g>
 
             <!-- annotation: verified location — short horizontal leader, clear of the polygon edge -->
-            <g font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.08em" fill="rgba(242,241,238,0.95)">
-              <line x1="242" y1="300" x2="256" y2="300" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-              <text x="262" y="304">VERIFIED · ±18m</text>
+            <g font-family="JetBrains Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.03em" fill="rgba(242,241,238,0.98)">
+              <line x1="245" y1="285" x2="259" y2="285" stroke="rgba(255,255,255,0.6)" stroke-width="1.2"/>
+              <text x="265" y="289">VERIFIED · ±18m</text>
             </g>
           </svg>
         </div>
@@ -825,7 +825,7 @@
         </p>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="https://docs.astral.global">
+        <a class="btn btn-primary" href="https://docs.astral.global" target="_blank" rel="noreferrer">
           Read the docs
           <svg viewBox="0 0 24 24"><path d="M7 17 L17 7 M9 7 h8 v8"/></svg>
         </a>
@@ -865,7 +865,7 @@
         <div class="footer-col">
           <h5>Build</h5>
           <ul>
-            <li><a href="https://docs.astral.global">Documentation</a></li>
+            <li><a href="https://docs.astral.global" target="_blank" rel="noreferrer">Documentation</a></li>
             <li><a href="https://github.com/AstralProtocol" target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a href="https://github.com/DecentralizedGeo/astral-sdk" target="_blank" rel="noreferrer">SDK</a></li>
           </ul>
