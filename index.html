@@ -319,6 +319,11 @@
     .primitive-body {
       font-size: 15px; line-height: 1.6; color: var(--fg-muted); margin: 0;
     }
+    .primitive-body a {
+      color: var(--fg); border-bottom: 1px solid var(--hairline);
+      transition: border-color 200ms var(--ease), color 200ms var(--ease);
+    }
+    .primitive-body a:hover { border-color: var(--accent); color: var(--accent); }
     .primitive-foot {
       margin-top: auto; padding-top: 8px;
       font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
@@ -426,7 +431,7 @@
        ---------------------------------------------------------- */
     footer { padding: 56px 0 40px; }
     .footer-grid {
-      display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 48px;
+      display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 40px;
       padding-bottom: 40px;
       border-bottom: 1px solid var(--hairline-2);
     }
@@ -664,7 +669,8 @@
             attestation, peer witnesses — signing each as a stamp, and
             bundling them into a single proof with its credibility made
             explicit. Alpha plugins are released, and the set of location
-            proof plugins is growing.
+            proof plugins is growing. The construction is written up in
+            <a href="https://collective.flashbots.net/t/towards-stronger-location-proofs/5323" target="_blank" rel="noreferrer">Towards stronger location proofs</a>.
           </p>
           <span class="primitive-foot">Alpha plugins released · more in progress</span>
         </article>
@@ -869,6 +875,15 @@
             <li><a href="https://docs.astral.global" target="_blank" rel="noreferrer">Documentation</a></li>
             <li><a href="https://github.com/AstralProtocol" target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a href="https://github.com/DecentralizedGeo/astral-sdk" target="_blank" rel="noreferrer">SDK</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Writing</h5>
+          <ul>
+            <li><a href="https://sotaletters.substack.com/p/spatial-alignment" target="_blank" rel="noreferrer">Spatial alignment</a></li>
+            <li><a href="https://collective.flashbots.net/t/towards-stronger-location-proofs/5323" target="_blank" rel="noreferrer">Stronger location proofs</a></li>
+            <li><a href="https://osf.io/bg2uq_v1" target="_blank" rel="noreferrer">Vision paper</a></li>
           </ul>
         </div>
 
