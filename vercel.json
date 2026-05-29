@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "echo 'static site — no dependencies to install'",
+  "buildCommand": "mkdir -p public && cp index.html public/index.html && cp -r assets public/assets && cp assets/og-image.png public/og-image.png",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
