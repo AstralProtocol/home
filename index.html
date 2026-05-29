@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Astral — Verifiable Location Infrastructure</title>
   <meta name="description" content="Astral makes geospatial computation verifiable: a third party can confirm a location-based result was computed correctly, without re-running it or trusting the operator." />
-  <link rel="icon" href="assets/astral-favicon-circle.svg" />
+  <link rel="icon" href="assets/astral-favicon.svg" />
   <link rel="canonical" href="https://astral.global/" />
   <meta name="theme-color" content="#0E0D24" />
 
@@ -148,6 +148,11 @@
     }
     .body { font-size: clamp(15px, 1.4vw, 16px); line-height: 1.65; color: var(--fg-muted); }
     .mono { font-family: var(--mono); }
+    .h-section em { font-style: italic; font-weight: 400; color: var(--accent); }
+    h1, h2, h3, h4, .hero-headline { text-wrap: balance; }
+    .lead, .body, .hero-sub, .primitive-body, .use-body { text-wrap: pretty; }
+    .brand-logo { height: 26px; width: auto; display: block; }
+    @media (max-width: 520px) { .brand-logo { height: 22px; } }
 
     /* ----------------------------------------------------------
        Buttons
@@ -462,14 +467,7 @@
   <nav class="nav">
     <div class="wrap nav-inner">
       <a href="#top" class="brand" aria-label="Astral home">
-        <span class="brand-mark">
-          <svg viewBox="0 0 973 812" fill="none" aria-hidden="true">
-            <path fill="currentColor" d="M635 70c8 90 22 167 60 218 38 51 100 75 218 95-122 16-184 36-225 91-41 55-49 130-58 226-9-96-19-171-58-226-39-55-101-75-225-91 121-20 183-44 222-95 39-51 51-128 66-218z"/>
-            <path fill="currentColor" d="M195 0c5 64 14 117 41 153 27 36 70 53 153 67-85 11-129 25-158 64-29 39-34 91-41 158-7-67-13-120-41-159-28-39-71-53-158-64 85-14 128-31 156-67 27-36 35-90 48-152z"/>
-            <path fill="currentColor" d="M192 532c4 50 11 92 32 121 21 28 55 41 121 53-67 9-101 20-124 50-23 30-27 71-32 124-5-53-10-94-32-125-22-31-56-42-124-50 67-12 101-25 122-53 21-28 27-71 37-120z"/>
-          </svg>
-        </span>
-        <span class="brand-name">Astral</span>
+        <img class="brand-logo" src="assets/astral-logo.svg" alt="Astral" width="110" height="28" />
       </a>
       <div class="nav-links">
         <a class="nav-link" href="#approach">Approach</a>
@@ -498,10 +496,11 @@
         </h1>
 
         <p class="hero-sub">
-          Astral makes computation over location verifiable. When a system
-          answers a question like <em style="font-style:italic; color:var(--fg);">is this inside that region?</em>,
+          The Astral Protocol provides infrastructure for verifiable
+          location-based services. When a system answers a spatial question —
+          <em style="font-style:italic; color:var(--fg);">is this point inside that region?</em> —
           Astral produces a signed, independently checkable record that the
-          answer was computed correctly — without exposing the underlying
+          answer was computed correctly, without exposing the underlying
           coordinates.
         </p>
 
@@ -533,51 +532,51 @@
             <rect width="520" height="520" fill="url(#grid)" />
 
             <!-- corner texture: project tag (left) and lat/long pair (right) -->
-            <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,0.30)" letter-spacing="0.08em">
+            <g font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(255,255,255,0.52)" letter-spacing="0.08em">
               <text x="20"  y="28">POLICY ZONE · ID 0xA13C</text>
-              <text x="388" y="28">40.7128° N</text>
-              <text x="388" y="42">74.0060° W</text>
+              <text x="386" y="28">40.7128° N</text>
+              <text x="386" y="42">74.0060° W</text>
             </g>
 
             <!-- policy polygon -->
             <polygon
               points="120,160 280,110 400,180 380,330 250,400 140,360 90,250"
-              fill="rgba(255,199,147,0.07)"
-              stroke="rgba(255,199,147,0.55)"
-              stroke-width="1.2"
+              fill="rgba(255,199,147,0.10)"
+              stroke="rgba(255,199,147,0.78)"
+              stroke-width="1.4"
               stroke-linejoin="round"
             />
-            <g fill="rgba(255,199,147,0.65)">
-              <circle cx="120" cy="160" r="2.4"/>
-              <circle cx="280" cy="110" r="2.4"/>
-              <circle cx="400" cy="180" r="2.4"/>
-              <circle cx="380" cy="330" r="2.4"/>
-              <circle cx="250" cy="400" r="2.4"/>
-              <circle cx="140" cy="360" r="2.4"/>
-              <circle cx="90"  cy="250" r="2.4"/>
+            <g fill="rgba(255,199,147,0.9)">
+              <circle cx="120" cy="160" r="2.5"/>
+              <circle cx="280" cy="110" r="2.5"/>
+              <circle cx="400" cy="180" r="2.5"/>
+              <circle cx="380" cy="330" r="2.5"/>
+              <circle cx="250" cy="400" r="2.5"/>
+              <circle cx="140" cy="360" r="2.5"/>
+              <circle cx="90"  cy="250" r="2.5"/>
             </g>
 
             <!-- verified point: crosshair + two uncertainty rings, sitting off-centre inside the polygon -->
             <g transform="translate(210,300)">
-              <circle r="42" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="2 4"/>
-              <circle r="22" fill="none" stroke="rgba(255,255,255,0.30)" stroke-width="1"/>
-              <line x1="-30" y1="0" x2="-14" y2="0" stroke="#F2F1EE" stroke-width="1"/>
-              <line x1="14"  y1="0" x2="30"  y2="0" stroke="#F2F1EE" stroke-width="1"/>
-              <line x1="0" y1="-30" x2="0"  y2="-14" stroke="#F2F1EE" stroke-width="1"/>
-              <line x1="0" y1="14"  x2="0"  y2="30"  stroke="#F2F1EE" stroke-width="1"/>
+              <circle r="42" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1" stroke-dasharray="2 4"/>
+              <circle r="22" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <line x1="-30" y1="0" x2="-14" y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="14"  y1="0" x2="30"  y2="0" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="0" y1="-30" x2="0"  y2="-14" stroke="#F2F1EE" stroke-width="1.2"/>
+              <line x1="0" y1="14"  x2="0"  y2="30"  stroke="#F2F1EE" stroke-width="1.2"/>
               <circle r="3" fill="#F2F1EE"/>
             </g>
 
-            <!-- annotation: policy region -->
-            <g font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em" fill="rgba(255,199,147,0.85)">
-              <line x1="400" y1="180" x2="445" y2="155" stroke="rgba(255,199,147,0.45)" stroke-width="0.8"/>
-              <text x="370" y="148">POLICY REGION</text>
+            <!-- annotation: policy region — horizontal leader off the left lip of the label -->
+            <g font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.08em" fill="rgba(255,199,147,0.92)">
+              <line x1="402" y1="180" x2="414" y2="180" stroke="rgba(255,199,147,0.6)" stroke-width="1"/>
+              <text x="420" y="184">POLICY REGION</text>
             </g>
 
-            <!-- annotation: verified location -->
-            <g font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em" fill="rgba(242,241,238,0.85)">
-              <line x1="232" y1="300" x2="300" y2="300" stroke="rgba(255,255,255,0.30)" stroke-width="0.8"/>
-              <text x="305" y="303">VERIFIED · ±18m</text>
+            <!-- annotation: verified location — short horizontal leader, clear of the polygon edge -->
+            <g font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="0.08em" fill="rgba(242,241,238,0.95)">
+              <line x1="242" y1="300" x2="256" y2="300" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <text x="262" y="304">VERIFIED · ±18m</text>
             </g>
           </svg>
         </div>
@@ -601,17 +600,17 @@
       <div class="section-header">
         <span class="eyebrow">The problem</span>
         <h2 class="h-section">
-          Location is easy to claim.<br/>
-          Hard to trust.
+          Location is easy to claim,<br/>
+          but hard to trust.
         </h2>
       </div>
 
       <div class="problem-body">
         <p class="body">
           Coordinates, check-ins, reported boundaries — all of it can be
-          spoofed, replayed, or quietly faked. And even when the data is
-          honest, the computation on top of it usually isn't checkable: you
-          take the operator's word that the result is what they say it is.
+          spoofed, replayed, or faked. And even when the data is honest, the
+          computation on top of it usually isn't checkable: you take the
+          operator's word that the result is what they say it is.
         </p>
         <p class="body">
           That's fine until the answer carries weight — did this run inside
@@ -631,10 +630,10 @@
     <div class="wrap">
       <div class="section-header">
         <span class="eyebrow">The approach</span>
-        <h2 class="h-section">Two components.</h2>
+        <h2 class="h-section">A modular set of components.</h2>
         <p class="lead">
-          Astral is a small set of components for turning a location-based
-          computation into something a third party can check.
+          Astral collects location proofs and runs geospatial policy checks
+          over them, producing verifiable evidence a third party can check.
         </p>
       </div>
 
@@ -649,24 +648,24 @@
             binding it to its inputs. Anyone can verify the computation was
             performed correctly, without re-running it. The compute is
             designed to run inside a trusted execution environment, so the
-            operator can't quietly alter the result.
+            operator can't tamper with the result.
           </p>
           <span class="primitive-foot">Signed attestations · TEE-targeted</span>
         </article>
 
         <article class="primitive">
-          <span class="primitive-index">02 / Working framework</span>
+          <span class="primitive-index">02 / Alpha</span>
           <h3 class="primitive-title">Composable location proofs</h3>
           <p class="primitive-body">
-            A location result is only as credible as the evidence behind it.
+            A location claim is only as credible as the evidence behind it.
             Astral provides a pipeline for collecting location evidence from
             independent sources — satellite, network, mobile device
             attestation, peer witnesses — signing each as a stamp, and
             bundling them into a single proof with its credibility made
-            explicit. The framework and interface are built; the set of
-            evidence plugins is growing.
+            explicit. Alpha plugins are released, and the set of location
+            proof plugins is growing.
           </p>
-          <span class="primitive-foot">Plugin interface live · integrations in progress</span>
+          <span class="primitive-foot">Alpha plugins released · more in progress</span>
         </article>
 
       </div>
@@ -682,9 +681,9 @@
         <span class="eyebrow">Where it applies</span>
         <h2 class="h-section">Questions where <em>where</em> changes the answer.</h2>
         <p class="lead">
-          The same primitive — a location-based result another party can
-          verify — supports a range of systems, depending on the rule
-          attached to it. A few directions the work points.
+          The same primitive — verifiable evidence a third party can check —
+          supports a range of systems, depending on the policy attached to it.
+          A few of the directions we're exploring:
         </p>
       </div>
 
@@ -744,11 +743,11 @@
 
         <div class="about-prose">
           <p class="body">
-            Astral is early and openly developed. The protocols, proof
-            constructions, and the open data standard underneath them (the
-            Location Protocol) are published and refined in public —
-            verifiability only means something if the system can be
-            inspected end to end.
+            This is an early research preview, developed in the open. The
+            protocols, proof constructions, and the open data standard
+            underneath them (the Location Protocol) are published and refined
+            in public — verifiability only means something if the system can
+            be inspected end to end.
           </p>
           <p class="body">
             The work is developed alongside researchers at the University of
@@ -765,7 +764,7 @@
           <div class="credibility-row">
             <span class="credibility-label">Operations</span>
             <span class="credibility-value mono" style="font-size:13px; color:var(--fg-muted);">
-              distance · area · contains · within · intersects · length
+              distance · area · contains · within · intersects · length · and more in development
             </span>
           </div>
           <div class="credibility-row">
@@ -833,14 +832,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="Astral home">
-            <span class="brand-mark">
-              <svg viewBox="0 0 973 812" fill="none">
-                <path fill="currentColor" d="M635 70c8 90 22 167 60 218 38 51 100 75 218 95-122 16-184 36-225 91-41 55-49 130-58 226-9-96-19-171-58-226-39-55-101-75-225-91 121-20 183-44 222-95 39-51 51-128 66-218z"/>
-                <path fill="currentColor" d="M195 0c5 64 14 117 41 153 27 36 70 53 153 67-85 11-129 25-158 64-29 39-34 91-41 158-7-67-13-120-41-159-28-39-71-53-158-64 85-14 128-31 156-67 27-36 35-90 48-152z"/>
-                <path fill="currentColor" d="M192 532c4 50 11 92 32 121 21 28 55 41 121 53-67 9-101 20-124 50-23 30-27 71-32 124-5-53-10-94-32-125-22-31-56-42-124-50 67-12 101-25 122-53 21-28 27-71 37-120z"/>
-              </svg>
-            </span>
-            <span class="brand-name">Astral</span>
+            <img class="brand-logo" src="assets/astral-logo.svg" alt="Astral" width="118" height="30" />
           </a>
           <p class="body">
             Verifiable location infrastructure. A research preview,
