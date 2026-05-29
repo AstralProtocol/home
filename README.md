@@ -1,55 +1,33 @@
-# ✨Astral Landing
+# Astral — astral.global
 
-## Install Gatsby Globally
+The Astral landing page. A single static HTML file, deployed on Vercel.
 
-```bash
-yarn install
-yarn global add gatsby-cli
-yarn gatsby telemetry --disable
-yarn gatsby feedback --disable
+## Structure
+
+```
+index.html      The page — self-contained (inlined CSS + JS), Google Fonts via CDN
+assets/         Logo(s), favicon, and the 1200x630 social card (og-image.png)
+vercel.json     Static deploy config (no framework build)
 ```
 
 ## Develop
 
-Clone repo and run develop
+No build step or dependencies. Open `index.html` directly, or serve the
+folder:
 
 ```bash
-cd landingV2
-yarn develop
+python3 -m http.server 8099
+# http://localhost:8099/index.html
 ```
 
-## Test Build
+## Deploy
 
-```bash
-yarn && yarn build
-```
+Vercel serves the site as static files. `vercel.json` assembles
+`index.html` + `assets/` into `public/` and publishes that — no Gatsby,
+no framework build. Pushing to the default branch deploys to production;
+pull requests get preview URLs.
 
-## Fleek Deploy
+## History
 
-Login to Fleek with GitHub
-
-- Docker image: `fleek/gatsby`
-
-- Build command: `yarn && yarn build`
-
-- Publish directory: `public`
-
-## DNS
-
-- Cloudflare nameservers: `kristin.ns.cloudflare.com` and `nitin.ns.cloudflare.com`
-
-- DNS Settings for Cloudflare
-  
-  - `CNAME astral.global 29be39ce0720784146fd.b-cdn.net`
-
-  - `CNAME _dnslink _dnslink.broad-morning-5527.on.fleek.co`
-
-  - `CNAME www 29be39ce0720784146fd.b-cdn.net`
-
-  - `CNAME _dnslink.www _dnslink.broad-morning-5527.on.fleek.co`
-
-## References
-
-- Based on [Marguerite Roth's landing page](https://github.com/margueriteroth)
-
-- Created by j-mars
+The previous Gatsby site is archived on the `legacy/gatsby-site` branch
+(`git checkout legacy/gatsby-site`).
