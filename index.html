@@ -225,6 +225,15 @@
       max-width: 56ch; margin: 0 0 40px;
     }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-essay {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 22px;
+      font-family: var(--sans); font-size: 14px; font-weight: 500;
+      color: var(--fg-muted); letter-spacing: 0.01em;
+      transition: color 200ms var(--ease);
+    }
+    .hero-essay svg { width: 12px; height: 12px; stroke: currentColor; stroke-width: 1.7; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .hero-essay:hover { color: var(--accent); }
     @media (max-width: 960px) {
       .hero { padding: 56px 0 72px; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -519,6 +528,11 @@
             View the code
           </a>
         </div>
+
+        <a class="hero-essay" href="https://sotaletters.substack.com/p/spatial-alignment" target="_blank" rel="noreferrer">
+          Why location matters for AI governance
+          <svg viewBox="0 0 24 24"><path d="M7 17 L17 7 M9 7 h8 v8"/></svg>
+        </a>
       </div>
 
       <figure class="diagram" aria-label="Diagram of a verified location inside a policy region">
